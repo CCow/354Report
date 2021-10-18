@@ -7,14 +7,13 @@
 \usepackage{fullpage}
 \usepackage[usenames]{color}
 \usepackage{hyperref}
-  \hypersetup{
-    colorlinks = true,
-    urlcolor = blue,       % color of external links using \href
-    linkcolor= blue,       % color of internal links 
-    citecolor= blue,       % color of links to bibliography
-    filecolor= blue,        % color of file links
-    }
-    
+\hypersetup{
+colorlinks = true,
+urlcolor = blue, % color of external links using \href
+linkcolor= blue, % color of internal links
+citecolor= blue, % color of links to bibliography
+filecolor= blue, % color of file links
+}
 \usepackage{listings}
 
 \definecolor{dkgreen}{rgb}{0,0.6,0}
@@ -22,25 +21,25 @@
 \definecolor{mauve}{rgb}{0.58,0,0.82}
 
 \lstset{frame=tb,
-  language=haskell,
-  aboveskip=3mm,
-  belowskip=3mm,
-  showstringspaces=false,
-  columns=flexible,
-  basicstyle={\small\ttfamily},
-  numbers=none,
-  numberstyle=\tiny\color{gray},
-  keywordstyle=\color{blue},
-  commentstyle=\color{dkgreen},
-  stringstyle=\color{mauve},
-  breaklines=true,
-  breakatwhitespace=true,
-  tabsize=3
+language=haskell,
+aboveskip=3mm,
+belowskip=3mm,
+showstringspaces=false,
+columns=flexible,
+basicstyle={\small\ttfamily},
+numbers=none,
+numberstyle=\tiny\color{gray},
+keywordstyle=\color{blue},
+commentstyle=\color{dkgreen},
+stringstyle=\color{mauve},
+breaklines=true,
+breakatwhitespace=true,
+tabsize=3
 }
 
 
 \title{CPSC-354 Report}
-\author{Connor Cowher  \\ Chapman University}
+\author{Connor Cowher \\ Chapman University}
 
 \date{10/17/2021}
 
@@ -49,33 +48,33 @@
 \maketitle
 
 \begin{abstract}
-This report will dive into the aspects of learning Haskell and the functions to know when creating a project. Haskell is much different from other programming languages like Java and C/C++ and requires a more extensive knowlege. Over the course of the 
+This report will dive into the aspects of learning Haskell and the functions to know when creating a project. Haskell is much different from other programming languages like Java and C/C++ and requires a more extensive knowledge to perfect. This software has an extensive Prelude, similar to a library, that should be looked into in order to better utilize the functions for your program. Haskell is a great introductory language for new programmers since it is its own unique assembly type language. Although you do not need a masters degree in mathematics, it would be beneficial to have some exposure in advanced arithmetic. Haskell is both as difficult and simple as you make it. As long as you study, understand, and make good decisions while programming, Haskell will be a great platform for you to utilize. I will also be explaining how to make a project in this language
+
 \end{abstract}
 
 \tableofcontents
 
-\section{Introduction}\label{intro}
+\section{Introduction}\label{intro} Replace Section~\ref{intro} with your own short introduction.
 
-Replace Section~\ref{intro} with your own short introduction. 
+Haskell is a programming language where it may take some time to understand all the features and nuances. One aspect where Haskell differs from the common universal languages is being "lazy". This means Haskell will not do any work unless it needs to be completed. It is as close to assembly language we have had in all of the courses Chapman offers. With learning Haskell, you do not necessarily have to have the most extensive programming experience or knowledge. Haskell is so vastly different from all other languages that it makes it the perfect starting point. Although learning something so different and unique has its advantages, being skilled in mathematics has its benefits to this language. Much of the beginning is understanding and interpreting basic mathematics in different formats. Something as simple as a basic calculator proves its challenges and will make you have an appreciation for everyday programs we use without an extra thought. 
+
 
 \subsection{General Remarks}
+Everything below here is used for template purposes and will not be included in my report
 
 
-
-First you need to \href{https://www.latex-project.org/get/}{download and install} LaTeX.\footnote{Links are typeset in blue, but you can change the layout and color of the links if you locate the  \texttt{hypersetup} command.}
+First you need to \href{https://www.latex-project.org/get/}{download and install} LaTeX.\footnote{Links are typeset in blue, but you can change the layout and color of the links if you locate the \texttt{hypersetup} command.}
 %
-Alternatively, you can use an online editor such as \href{https://www.overleaf.com/learn}{Overleaf}. I prefer to have my own installation, but to get started Overleaf may be easier. 
+Alternatively, you can use an online editor such as \href{https://www.overleaf.com/learn}{Overleaf}. I prefer to have my own installation, but to get started Overleaf may be easier.
 
- 
 \medskip\noindent
 LaTeX is a markup language (as is, for example, HTML). The source code is in a \verb+.tex+ file and needs to be compiled for viewing, usually to \verb+.pdf+.
 
 
 \medskip\noindent
 If you want to change the default layout, you need to type commands. For example, \verb+\medskip+ inserts a medium vertical space and \verb+\noindent+ starts a paragraph without indentation.
- 
 \medskip\noindent
-Mathematics is typeset between double dollars, for example $$x+y=y+x.$$
+Mathematics is typeset double dollars, for example $$x+y=y+x.$$
 
 
 \subsection{LaTeX Resources}
@@ -85,9 +84,9 @@ I start a new subsection, so that you can see how it appears in the table of con
 \begin{itemize}
 \item This is how you itemize in LaTeX.
 \item I think a good way to learn LaTeX is by starting from this template file and build it up step by step. Often stackoverflow will answer your questions. But here are a few resources:
-  \begin{enumerate}
-  \item \href{https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes}{Learn LaTeX in 30 minutes}
-  \item \href{https://www.latex-project.org/}{LaTeX – A document preparation system}\end{enumerate}
+\begin{enumerate}
+\item \href{https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes}{Learn LaTeX in 30 minutes}
+\item \href{https://www.latex-project.org/}{LaTeX – A document preparation system}\end{enumerate}
 \end{itemize}
 
 \subsection{Plagiarism}
@@ -96,7 +95,7 @@ To avoid plagiarism, make sure that in addition to \cite{PL} you also cite all t
 
 \section{Haskell}\label{haskell}
 
-This section will contain your own introduction to Haskell. 
+This section will contain your own introduction to Haskell.
 
 \medskip\noindent
 To typeset Haskell there are several possibilities. For the example below I took the LaTeX code from \href{https://stackoverflow.com/a/3175141/4600290}{stackoverflow} and the Haskell code from \href{https://hackmd.io/@alexhkurz/HylLKujCP}{my tutorial}.
@@ -105,7 +104,7 @@ To typeset Haskell there are several possibilities. For the example below I took
 -- run the transition function on a word and a state
 run :: (State -> Char -> State) -> State -> [Char] -> State
 run delta q [] = q
-run delta q (c:cs) = run delta (delta q c) cs 
+run delta q (c:cs) = run delta (delta q c) cs
 \end{lstlisting}
 
 \medskip\noindent
@@ -114,18 +113,24 @@ This works well for short snippets of code. For entire programs, it is better to
 
 \section{Programming Languages Theory}
 
-In this section you will show what you learned about the theory of programming languages. 
+In this section you will show what you learned about the theory of programming languages.
 
 \section{Project}
 
 In this section you will describe a short project. It can either be in Haskell or of a theoretical nature,
 
 \section{Conclusions}\label{conclusions}
-Short conclusion. 
+Short conclusion.
 
 \begin{thebibliography}{99}
 \bibitem[PL]{PL} \href{https://github.com/alexhkurz/programming-languages-2021/blob/main/README.md}{Programming Languages 2021}, Chapman University, 2021.
+\bibitem[PL]{https://wiki.haskell.org/Learn_Haskell_in_10_minutes}
 \end{thebibliography}
 
 \end{document}
-  
+
+
+
+
+
+
