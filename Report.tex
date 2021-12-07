@@ -41,18 +41,19 @@ tabsize=3
 \title{CPSC-354 Report}
 \author{Connor Cowher \\ Chapman University}
 
-\date{10/17/2021}
+\date{12/21/2021}
 
 \begin{document}
 
 \maketitle
 
 \begin{abstract}
-This report will dive into the aspects of learning Haskell and the functions to know when creating a project. Haskell is much different from other programming languages like Java and C/C++ and requires a more extensive knowledge to perfect. This software has an extensive Prelude, similar to a library, that should be looked into in order to better utilize the functions for your program. Haskell is a great introductory language for new programmers since it is its own unique assembly type language. Although you do not need a masters degree in mathematics, it would be beneficial to have some exposure in advanced arithmetic. Haskell is both as difficult and simple as you make it. As long as you study, understand, and make good decisions while programming, Haskell will be a great platform for you to utilize. I will also be explaining how to make a project in this language, while showing some example code in Haskell. Coding in this language seems very basic and very few characters are required per line, for the most part. A very useful topic to know and have in your back pocket would be lambda calculus. This version of mathematics is very helpful in computer calculation logic, a major aspect of Haskell. While helping out in logic, another helpful aspect of lambda calculus is its ability to simulate on a Turing machine. Though limited to linux systems, a virtual machine, or virtual box application, can simulate an apple OS while on a windows machine...
-
+This report will dive into the aspects of learning Haskell and the functions to know when creating a project. Haskell is much different from other programming languages like Java and C/C++ and requires a more extensive knowledge to perfect. This software has an extensive Prelude, similar to a library, that should be looked into in order to better utilize the functions for your program. Haskell is a great introductory language for new programmers since it is its own unique assembly type language. Although you do not need a masters degree in mathematics, it would be beneficial to have some exposure in advanced arithmetic. Haskell is both as difficult and simple as you make it. As long as you study, understand, and make good decisions while programming, Haskell will be a great platform for you to utilize. I will also be explaining how to make a project in this language, while showing some example code in Haskell. Coding in this language seems very basic and very few characters are required per line, for the most part. A very useful topic to know and have in your back pocket would be lambda calculus. This version of mathematics is very helpful in computer calculation logic, a major aspect of Haskell. While helping out in logic, another helpful aspect of lambda calculus is its ability to simulate on a Turing machine. Though limited to Linux systems, a virtual machine, or virtual box application, can simulate an apple OS while on a windows machine...
+\clearpage
 \end{abstract}
 
 \tableofcontents
+\clearpage
 
 \section{Introduction}\label{intro} 
 
@@ -61,44 +62,38 @@ After familiarizing yourself with the UI and paths needed to have interacting cl
 
 
 \subsection{General Remarks}
-Everything below here is used for template purposes and will not be included in my report in its current form. ~~Work in progress below~~
+Everything below here is used for template purposes and will not be included in my report in its current form. 
+~~Work in progress below~~
 
 
-First you need to \href{https://www.latex-project.org/get/}{download and install} LaTeX.\footnote{Links are typeset in blue, but you can change the layout and color of the links if you locate the \texttt{hypersetup} command.}
-%
-Alternatively, you can use an online editor such as \href{https://www.overleaf.com/learn}{Overleaf}. I prefer to have my own installation, but to get started Overleaf may be easier.
-
-\medskip\noindent
-LaTeX is a markup language (as is, for example, HTML). The source code is in a \verb+.tex+ file and needs to be compiled for viewing, usually to \verb+.pdf+.
+ $$x+y=y+x.$$
 
 
-\medskip\noindent
-If you want to change the default layout, you need to type commands. For example, \verb+\medskip+ inserts a medium vertical space and \verb+\noindent+ starts a paragraph without indentation.
-\medskip\noindent
-Mathematics is typeset double dollars, for example $$x+y=y+x.$$
-
-
-\subsection{LaTeX Resources}
+\subsection{Itemize and numbered lists template}
 
 I start a new subsection, so that you can see how it appears in the table of contents.
 
 \begin{itemize}
 \item This is how you itemize in LaTeX.
-\item I think a good way to learn LaTeX is by starting from this template file and build it up step by step. Often stackoverflow will answer your questions. But here are a few resources:
 \begin{enumerate}
 \item \href{https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes}{Learn LaTeX in 30 minutes}
 \item \href{https://www.latex-project.org/}{LaTeX – A document preparation system}\end{enumerate}
 \end{itemize}
 
-\subsection{Plagiarism}
-
-To avoid plagiarism, make sure that in addition to \cite{PL} you also cite all the external sources you use.
-
 \section{Haskell}\label{haskell}
 
-Learning a new programming language is almost always a steep learning curve. At first it is very difficult to understand and utilize all the nuances of the language. However, this is not the case with Haskell. Unlike every other interpreter language professors use here at Chapman, Haskell is vastly unique and takes a lot more time to fully understand how it works. For instance, Haskell is not an interpreter language, but actually a functional programming language. A bonus to being a functional programming language is the ability to change state whenever you desire. When you run a program in Java or C/C++ a variable must stay consistent when being used in a defined function. This is not the case with Haskell, because you could assign variable ‘x’ to equal 10 in one line then go and change it to say 1 in another line down the program. A topic that was discussed in lecture was the fact that Haskell is a “lazy” programming language. When executing a function you wrote an answer will not be displayed until specifically asked by the user. While typing less in a user created program will theoretically save you time, the adjustment period may prove challenging to experienced programmers. 
+\subsection {Haskell Introduction}
+
+Learning a new programming language is almost always a steep learning curve. At first it is very difficult to understand and utilize all the nuances of the language. However, this is not the case with Haskell. Unlike every other interpreter language professors use here at Chapman, Haskell is vastly unique and takes a lot more time to fully understand how it works. For instance, Haskell is not an interpreter language, but actually a functional programming language. A bonus to being a functional programming language is the ability to change state whenever you desire. When you run a program in Java or C/C++ a variable must stay consistent when being used in a defined function. This is not the case with Haskell, because you could assign variable ‘x’ to equal 10 in one line then go and change it to say 1 in another line down the program. A topic that was discussed in lecture was the fact that Haskell is a “lazy” programming language. When executing a function you wrote an answer will not be displayed until specifically asked by the user. While typing less in a user created program will theoretically save you time, the adjustment period may prove challenging to experienced programmers. \vskip
 \indent Some changes programmers would have to make when transitioning from an interpreter language to Haskell is learning to unlearn the variable naming convention of most modern interpreters. When using Java, a programmer might type the expression ‘int x = 1+1’. In Haskell there is no need for the expression ‘int’. Haskell is smart enough to deduce a variable is supposed to have an integer value when an equation is opposite the equal sign.  
 
+\subsection{Types in Haskell}
+
+    \subsubsection{Static Typing}
+    As stated earlier, Haskell is a static type system. This means the code will run safer and errors are caught at the instance of compiling, not during execution of actual program. The static typing does not allow a program to run with an error such as an int divided by a string. Furthermore there is no need for variable declaration in Haskell. 
+    
+    \subsubsection{Type Inference}
+    The interpreter has type inference as well. The auto detection is sophisticated enough to deduce which type is being used in what instance.
  
 
 \medskip\noindent
@@ -118,6 +113,8 @@ This works well for short snippets of code. For entire programs, it is better to
 \section{Programming Languages Theory}
 
 In this section you will show what you learned about the theory of programming languages.
+\subsection{Lambda Calculus}
+...
 
 \section{Project}
 
@@ -125,7 +122,7 @@ Projects in Haskell are much more intensive and require more time to accomplish 
 
 \section{Conclusions}\label{conclusions}
 
-So in conclusion we have gone over quite a bit of subjects regarding Haskell and its basics to understand completely before undertaking an assignment of your own. While having previous knowledge and experience is usually a benefit to your cause, Haskell might put that notion to the test. Something as simple as adding positive numbers can cause so many problems to programmers' complicated structured brains.
+So in conclusion we have gone over quite a bit of subjects regarding Haskell and its basics to understand completely before undertaking an assignment of your own. While having previous knowledge and experience is usually a benefit to your cause, Haskell might put that notion to the test. Something as simple as adding positive numbers can cause so many problems to programmers' complicated structured brains. 
 
 \begin{thebibliography}{99}
 \bibitem[PL]{PL} \href{https://github.com/alexhkurz/programming-languages-2021/blob/main/README.md}{Programming Languages 2021}, Chapman University, 2021.
