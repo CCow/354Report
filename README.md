@@ -8,4 +8,4 @@
 
 #Upload 3) bulked up intro and abstract. Made adjustments to other sections which will contain more information soon
 
-#Upload 4) Added haskell starting paragraph and 
+#Upload 4) Added haskell starting paragraph and made grammatical adjustments
