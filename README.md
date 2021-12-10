@@ -11,3 +11,5 @@
 #Upload 4) Added haskell starting paragraph and made grammatical adjustments
 
 #Upload 5) Switched to using overleaf because TeXworks was not compiling in a .pdf document
+
+#Upload 6) Added examples in type inference section along with bibliography updates
