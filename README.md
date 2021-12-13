@@ -13,3 +13,5 @@
 #Upload 5) Switched to using overleaf because TeXworks was not compiling in a .pdf document
 
 #Upload 6) Added examples in type inference section along with bibliography updates
+
+#Upload 7) Added new subsection, Lists, completed most of section I wanted to, will revisit at later date
