@@ -17,3 +17,5 @@
 #Upload 7) Added new subsection, Lists, completed most of section I wanted to, will revisit at later date
 
 #Upload 8) Almost finished part one and started making sections for part two
+
+#Upload 9) Finished creating topics for Part 1 and will expand upon sections. Started adding more subsections for part 2
