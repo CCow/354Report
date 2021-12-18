@@ -19,3 +19,5 @@
 #Upload 8) Almost finished part one and started making sections for part two
 
 #Upload 9) Finished creating topics for Part 1 and will expand upon sections. Started adding more subsections for part 2
+
+#Upload 10) Outlined sections for Part 2 and revised feedback for Part 1, not finished entirely
