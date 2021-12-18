@@ -48,7 +48,7 @@ tabsize=3
 \maketitle
 
 \begin{abstract}
-This report will dive into the aspects of learning Haskell and the functions to know when creating a project. Haskell is much different from other programming languages like Java and C/C++ and requires a more extensive knowledge to perfect. This software has an extensive Prelude, similar to a library, that should be looked into in order to better utilize the functions for your program. Haskell is a great introductory language for new programmers since it is its own unique assembly type language. Although you do not need a masters degree in mathematics, it would be beneficial to have some exposure in advanced arithmetic. Haskell is both as difficult and simple as you make it. As long as you study, understand, and make good decisions while programming, Haskell will be a great platform for you to utilize. I will also be explaining how to make a project in this language, while showing some example code in Haskell. Coding in this language seems very basic and very few characters are required per line, for the most part. A very useful topic to know and have in your back pocket would be lambda calculus. This version of mathematics is very helpful in computer calculation logic, a major aspect of Haskell. While helping out in logic, another helpful aspect of lambda calculus is its ability to simulate on a Turing machine. Though limited to Linux systems, a virtual machine, or virtual box application, can simulate an apple OS while on a windows machine...
+This report will dive into the aspects of learning Haskell and the functions to know when creating a project. I thought I would create a tutorial to learning Haskell the way I would have liked to learn. I found the language to be quite difficult in some areas and a guide on getting started would have been super helpful in comparing this new language to ones I have already had the pleasure of working in. I will discuss how Haskell is much different from other programming languages like Java and C/C++ and requires a more extensive knowledge to perfect. This software has an extensive Prelude, similar to a library, that should be looked into in order to better utilize the functions for your program. Haskell is a great introductory language for new programmers since it is its own unique assembly type language. Although you do not need a masters degree in mathematics, it would be beneficial to have some exposure in advanced arithmetic. Haskell is both as difficult and simple as you make it. As long as you study, understand, and make good decisions while programming, Haskell will be a great platform for you to utilize. I will also be explaining how to make a project in this language, while showing some example code in Haskell. Coding in this language seems very basic and very few characters are required per line, for the most part. A very useful topic to know and have in your back pocket would be lambda calculus. This version of mathematics is very helpful in computer calculation logic, a major aspect of Haskell. While helping out in logic, another helpful aspect of lambda calculus is its ability to simulate on a Turing machine. Though limited to Linux systems, a virtual machine or virtual box application can simulate an apple OS while on a windows machine. At the cost of RAM for some, any computer can run Haskell and utilize the programming language for a business, personal use, financial applications, etc. 
 \clearpage
 \end{abstract}
 
@@ -154,11 +154,15 @@ After familiarizing yourself with the UI and paths needed to have interacting cl
 \subsection{Functions}
     
     \subsubsection{Creating Functions}
-    The process of creating a function is not much different than in C/C++ or Java. In one short line you can create a mathematical equation like the one listed below
+    The process of creating a function is not much different than in C/C++ or Java. The way you start is by naming the function you are creating. I will name the function 'timesTwo' and the function will double the inputted number. In two short lines you can create a mathematical equation like the one listed below. 
     
     \begin{lstlisting}
+    timesTwo :: Integer -> Integer
     timesTwo x = x + x 
     \end{lstlisting}
+    
+    \medskip
+    The first line of this function is the declaration. The function is called 'timesTwo' and it will take an Integer parameter and outputs an Integer as well. The next line is where we actually define the function. This lines purpose is to illustrate what is happening when we eventually call this function. Here timesTwo will take an integer parameter, add it to itself and return the value of the equation. 
     
     \medskip
     As you can see it is pretty simple. Now creating functions and understanding all the intricacies it has to offer are two completely different things. 
@@ -171,7 +175,7 @@ After familiarizing yourself with the UI and paths needed to have interacting cl
     maxNum :: (Ord x) => x -> x -> x 
     
     --Command Line Input--
-    maxNum 5 10 || gchi> (maxNum 5) 10
+    maxNum 5 10 || (maxNum 5) 10
     10
     \end{lstlisting}
     
@@ -233,9 +237,41 @@ Haskell is equipped with customization if you can adequately structure your prog
         data Card = (suit, value)
     \end{lstlisting}
     
-    Here we are creating a data type and calling it Card. Before we can make a card, however, we need to use specific parameters that make up a deck. If you are not familiar with playing cards there are two specifications that make each one unique. Out of the fifty-two cards in a deck there are four suits and each suit has thirteen values (1-10, Jack, Queen, King). In this example I started by creating the two constraints that will be going into the card data type, suit and value. The Ace is denoted by integer one, two through ten are as printed on each card, and numbers eleven through thirteen coordinate to Jack through King. Lastly the suit is a user created data type that will equal one of four strings. We could group the cards in a list called deck, with a collection of the fifty-two 'Cards' but for simplicity, this would do the job it is intended for.
+    Here we are creating a data type and calling it Card. Before we can make a card, however, we need to use specific parameters that make up a deck. If you are not familiar with playing cards there are two specifications that make each one unique. Out of the fifty-two cards in a deck there are four suits and each suit has thirteen values (1-10, Jack, Queen, King). In this example I started by creating the two constraints that will be going into the card data type, suit and value. The Ace is denoted by integer one, two through ten are as printed on each card, and numbers eleven through thirteen coordinate to Jack through King. Lastly the suit is a user created data type that will equal one of four strings. We could group the cards in a list called deck, with a collection of the fifty-two 'Cards' but for simplicity's sake, this would do the job it is intended for. Now you have the ability to create
     
-\subsection{Haskell Input and Output }
+    \subsubsection{Custom Itemized List}
+    Let's take a look at what it looks like to create a profile of a college student here at Chapman. We'll start by defining a new type 'Student' and it will take inputs of characteristics of a student.
+    
+    \medskip
+    \begin{lstlisting}
+        data Student = Student String String String String Float
+        
+        first :: Person -> String  
+        first (Person first _ _ _ _ ) = first
+          
+        lastN :: Person -> String  
+        lastN (Person _ lastn _ _ _ ) = lastn
+          
+        standing :: Person -> String  
+        standing (Person _ _ standing _ _ ) = standing
+          
+        major :: Person -> String  
+        major (Person _ _ _ major _ ) = major
+          
+        gpa :: Person -> Float  
+        gpa (Person _ _ _ _ gpa ) = gpa
+        
+        Here the underscores '_' are serving as a place holder for this list's values
+    \end{lstlisting}
+    
+    \noindent The new Student data type will display a first name, last name, academic standing, major, and grade point average. To better illustrate how to actually input the details we will just follow the outline of the data type Student inputted at the beginning. To begin we'll use the 'let' command already implemented in Haskell
+    
+    \begin{lstlisting}
+        let me = Student "Connor" "Cowher" "Senior" "Computer Science" 3.50
+    \end{lstlisting}
+    \noindent Here we make a reference to the Student data type and name it 'me'. I input the items and their correct types that correspond to the Student type, String String String String Float. With that command a student is created and we can pick and choose what to see. For instance if I were to type in 'me' into the command line, all 4 Strings and singular Float would be outputted on the screen. If this list were to hold more than one student and you wanted to find the Connor's major, you could have Haskell only return that item. All you would need to do is type in 'major' followed by 'me' and the interpreter would return Computer Science since we inputted that earlier. 
+    
+\subsection{Haskell Input and Output}
     \subsubsection{Understanding Functional Language}
     As a seasoned Java programmer one of the hardest changes to make in Haskell is understanding the difference between a functional programming language and an imperative language. The biggest difference is when a programmer is compiling the finished program for testing. In languages like C/C++ or Python a functioning program will look like a series of instructions that allows the computer to complete a specific task or function. A well structured imperative language program with functions has lines that will have some sort of impact on the computer's memory. Where Haskell is different is the fact that lines in the program define a state rather than complete a task. It sounds confusing but after seeing a few examples and struggling through your first program will teach you a lot. 
     
@@ -268,6 +304,18 @@ Haskell is equipped with customization if you can adequately structure your prog
               Hello World!
     \end{lstlisting}
     
+    \noindent That is all it takes to compile and run your code for testing.
+    
+    \medskip
+    \subsubsection{Understanding Input Output}
+    Having a properly functioning program is one thing, but what if you wanted an application to interact with the user and have outputs for the programmer set? This is where a couple of useful commands come in to play. Luckily for new Haskell users, these I/O operations come default when you download Haskell so there is no need to create your own.  
+    
+    \lstinline{putStrLn}
+    
+    \smallskip
+    \lstinline{getLine}
+    
+    putStrLn is an Input/Output operation that takes in a String and displays it to the screen. If we are programming an application that requires user input we would use the putStrLn to prompt the user for any information required for the process to work. Some programmers might have used the keyword print in the past or a variation of it. putStrLn is the Haskell equivalent to print and will return a an empty line, perfect for someone to input a String or Int, whatever the program calls for. getLine works in the opposite way of putStrLn in that it will return the input the user types. This command will stop and wait for an input and only works when an outside force presses return on the terminal.
 
 \section{Programming Languages Theory}
     \subsection{Lambda Calculus}
@@ -279,7 +327,7 @@ Haskell is equipped with customization if you can adequately structure your prog
     
     \noindent That is all there is to it. The first thing to break down about this simple input is the lambda symbol. Like in many other languages Haskell requires a symbol to denote the start of a function. We accomplish this by using lambda at the start of the line. After that you must define the parameters of the function and end the list with a '.'. The second a in the example is known as the body of the function. This part of the code will be returned when the function is called in the compiler. Some vocabulary to know is the variable in the example above is known as bound because the 'a' appears in both the parameters and the function body. If there were to only be one 'a' on one side of the '.' then the variable would be labeled as free. Bound and free are self explanatory but in short, a free variable indicates the function depends on the variable and a bound variable does not. 
         \subsubsection{Applications of Lambda Calculus}
-        Writing a lambda function is one thing to master and applying it to another function can be a difficult thing to learn. 
+        Writing a lambda function is one thing to master and applying it to another function can be a difficult thing to learn. First of all, lambda functions are anonymous and do not have a name when being used. These functions differ from others because they do not take in variables. Instead they are nested by other functions 
     
         \subsubsection{Church Numerals}
         Church numerals can be defined as the act of applying a function to a value, any number of times. The amount of times it is applied is added onto the end of 'church number n' where n denotes the number.
@@ -288,10 +336,28 @@ Haskell is equipped with customization if you can adequately structure your prog
              (\lambda λ f a . (f (f (f (f a)))))
         \medskip
     
-    This here is church number 4, meaning it is an action that applies a function, f, to a value, a, 4 times \footnote{Programming Languages}.
+    This here is church number 4; meaning it is an action that applies a function, f, to a value, 'a', 4 times \footnote{Programming Languages}.
         
     \subsection{Parsing}
-    Parsing is a topic in Lambda Calculus that is similar to curried functions. The definition of a Parser is a component of an interpreter, which parses the source code of a programming language to create a form of internal representation.
+    Parsing is a topic in Lambda Calculus that is similar to curried functions. The definition of a Parser is a component of an interpreter, which parses the source code of a programming language to create a form of internal representation. However in order to fulling grasp this idea we need to learn about pattern matching and recursion
+        
+        \subsubsection{Pattern matching}
+        Pattern matching is syntax in Haskell that takes in a specific pattern and checks it with new data to see if it will be in accordance with the given pattern. The useful part is it can be utilized with any type of data Haskell comes default with. To make use of pattern matching you will have to define a function with the specific pattern. The purpose of pattern matching in Haskell is to help simplify your code and leave less room for errors. Creating a factorial function will help put this into a better perspective. 
+        
+        \begin{lstlisting}
+            factorial :: Integer -> Integer 
+            
+            factorial 0 = 1
+            factorial a = a * factorial(a - 1)
+        \end{lstlisting}
+        
+        \noindent Here we have the function declaration again where the function factorial will input an Integer and return an Integer. Next we create a pattern for the function to follow. In a factorial a number is taken and multiplied by the number directly beneath it.That operation happens again and again until you reach 0. Obviously you do not want to do all those calculations just for your answer to be 0. So the first step in preventing that is to make sure when you get 0 as an input, its value is changed to one. Next you can get on to building the sequence. You would start by taking the parameter set by the user, 'a' in this example, and multiplying it by the value of 'a' minus one. That would be all we need to do if our application would only take in 2, 1, or zero. Obviously having a limit of three inputs would not be a productive use of code. To combat this, we can utilize recursion to save space and make our code run more efficiently. As touched upon in curried functions, the factorial function will call factorial within itself. 
+        
+        \subsubsection{Recursion}
+        Recursion is hopefully not a foreign topic to you as it is very useful within the inter workings of a functional programming language. The example above showed you the basics of recursion, keep doing an operation until a condition is met. As mentioned earlier recursion is the act of calling a function in the definition of that same function.
+        
+        \subsubsection{Parsing Continued}
+        With a better understand of pattern matching and recursion we can dive deeper into the theory of parsing. Parsing is taking a concrete syntax and transforming it into an abstract syntax, meaning it will take in a input of characters and applies logic to conform to the software. 
     
     
 
