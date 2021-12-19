@@ -1,0 +1,389 @@
+\documentclass{article}
+
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fullpage}
+\usepackage[usenames]{color}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks = true,
+urlcolor = blue, % color of external links using \href
+linkcolor= blue, % color of internal links
+citecolor= blue, % color of links to bibliography
+filecolor= blue, % color of file links
+}
+\usepackage{listings}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+language=haskell,
+aboveskip=3mm,
+belowskip=3mm,
+showstringspaces=false,
+columns=flexible,
+basicstyle={\small\ttfamily},
+numbers=none,
+numberstyle=\tiny\color{gray},
+keywordstyle=\color{blue},
+commentstyle=\color{dkgreen},
+stringstyle=\color{mauve},
+breaklines=true,
+breakatwhitespace=true,
+tabsize=3
+}
+
+
+\title{CPSC-354 Report}
+\author{Connor Cowher \\ Chapman University}
+
+\date{12/21/2021}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This report will dive into the aspects of learning Haskell and the functions to know when creating a project. I thought I would create a tutorial to learning Haskell the way I would have liked to learn. I found the language to be quite difficult in some areas and a guide on getting started would have been super helpful in comparing this new language to ones I have already had the pleasure of working in. I will discuss how Haskell is much different from other programming languages like Java and C/C++ and requires a more extensive knowledge to perfect. This software has an extensive Prelude, similar to a library, that should be looked into in order to better utilize the functions for your program. Haskell is a great introductory language for new programmers since it is its own unique assembly type language. Although you do not need a masters degree in mathematics, it would be beneficial to have some exposure in advanced arithmetic. Haskell is both as difficult and simple as you make it. As long as you study, understand, and make good decisions while programming, Haskell will be a great platform for you to utilize. I will also be explaining how to make a project in this language, while showing some example code in Haskell. Coding in this language seems very basic and very few characters are required per line, for the most part. A very useful topic to know and have in your back pocket would be lambda calculus. This version of mathematics is very helpful in computer calculation logic, a major aspect of Haskell. While helping out in logic, another helpful aspect of lambda calculus is its ability to simulate on a Turing machine. Though limited to Linux systems, a virtual machine or virtual box application can simulate an apple OS while on a windows machine. At the cost of RAM for some, any computer can run Haskell and utilize the programming language for a business, personal use, financial applications, etc. 
+\clearpage
+\end{abstract}
+
+\tableofcontents
+\clearpage
+
+\section{Introduction}\label{intro} 
+
+Haskell is a programming language where it may take some time to understand all the features and nuances. One aspect where Haskell differs from the common universal languages is being "lazy". This means Haskell will not do any work unless it needs to be completed. It is as close to assembly language we have had in all of the courses Chapman offers. With learning Haskell, you do not necessarily have to have the most extensive programming experience or knowledge. Haskell is so vastly different from all other languages that it makes it the perfect starting point. Although learning something so different and unique has its advantages, being skilled in mathematics has its benefits to this language. Much of the beginning is understanding and interpreting basic mathematics in different formats. Something as simple as a basic calculator proves its challenges and will make you have an appreciation for everyday programs we use without an extra thought. Since most students taking this course are upperclassmen, that does imply a more extensive understanding than most individuals so we can assume this isn’t our first time learning a new language. Assembly language is vastly different from interpreter languages as one knows, but understanding how the integers and and negative numbers work with different operations will take some time. Firstly, functions are unique in the way they are created. There are multiple classes that must work hand in hand to make a program function correctly. The first assignment for Programming Languages was to create, from a template, a calculator and make our own operations. With a partner we concluded to do our basic 4 mathematical operations and added a couple more, commonly found on a TI-84 calculator. While these other operations, square root, squared, etc. are simple in theory, creating a function that can handle any type of input proves much harder to accomplish. With that out of the way we can dive into the beginning of starting this language. To begin, you should start downloading Haskell by visiting … (insert download link). 
+
+\medskip\noindent
+After familiarizing yourself with the UI and paths needed to have interacting classes, a beneficial task to complete would be to go back and understand lambda calculus. A majority of functions will require some knowledge of lambda calculus and understanding it would fast track any issues you run into while coding any mathematical functions in Haskell. 
+
+
+    \subsection{General Remarks}
+    Everything below here is used for template purposes and will not be included in my report in its current form. 
+    ~~Work in progress below~~
+    
+    
+     $$x+y=y+x.$$
+    
+    
+    \subsection{Itemize and numbered lists template}
+    
+    \begin{itemize}
+    \item This is how you itemize in LaTeX.
+    \begin{enumerate}
+    \item \href{https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes}{Learn LaTeX in 30 minutes}
+    \item \href{https://www.latex-project.org/}{LaTeX – A document preparation system}\end{enumerate}
+    \end{itemize}
+    \medskip\noindent
+    
+    ~~Delete Above L8r~~
+    
+\section{Haskell}\label{haskell}
+
+    \subsection {Haskell Introduction}
+    Learning a new programming language is almost always a steep learning curve. At first it is very difficult to understand and utilize all the nuances of the language. However, this is not the case with Haskell. Unlike every other interpreter language professors use here at Chapman, Haskell is vastly unique and takes a lot more time to fully understand how it works. For instance, Haskell is not an interpreter language, but actually a functional programming language. A bonus to being a functional programming language is the ability to change state whenever you desire. When you run a program in Java or C/C++ a variable must stay consistent when being used in a defined function. This is not the case with Haskell, because you could assign variable ‘x’ to equal 10 in one line then go and change it to say 1 in another line down the program. A topic that was discussed in lecture was the fact that Haskell is a “lazy” programming language. When executing a function you wrote an answer will not be displayed until specifically asked by the user. While typing less in a user created program will theoretically save you time, the adjustment period may prove challenging to experienced programmers. 
+    \medskip
+    \noindent Some changes programmers would have to make when transitioning from an interpreter language to Haskell is learning to unlearn the variable naming convention of most modern interpreters. When using Java, a programmer might type the expression ‘int x = 1+1’. In Haskell there is no need for the expression ‘int’. Haskell is smart enough to deduce a variable is supposed to have an integer value when an equation is opposite the equal sign.  
+    
+        \subsubsection{Background of Haskell}
+        After the creation of the programming language "Miranda" the world wanted to start to venture more into lazy evaluation. The most critical problem with Miranda was the fact it was a proprietary software, not open source for the public to use. In order to utilize this groundbreaking programming software you would have to pay a nice fee to obtain the licence. Just a two year timeline is all it took for a committee to meet and come to the conclusion that an open sourced functional programming language was really needed. The FPCA committee, that met in Portland in 1987, came to the conclusion that a new language, that took into account problems discovered in other languages like Miranda, was to be created.\footnote{\href{https://serokell.io/blog/haskell-history}{Denis Oleynikov, Gints Dreimanis: Haskell. History of a Community-Powered Language}} Most importantly they wanted this software to be free to the public so it was not monopolized by the one percent or big corporations with limitless wealth. Thus in a short time Haskell was born. The creation of Haskell was able to trump the short dynasty of Miranda by becoming an open standard functional programming language, allowing millions of users to suggest and reform properties. 
+        
+        \medskip With the idea of an open sourced programming language taking form, another ground breaking addition had to introduced. Flashback to around 1925 at Princeton University, Alonzo Church was attending the school. He was an incredible student and graduated in four years with a degree in Mathematics. After finishing his undergrad work Alonzo decided to stay at Princeton and work tirelessly on his post-graduate work. Eventually in around 1935 Alonzo published his work on the topic of Lambda Calculus. The basis for the paper was centered around 'Entscheidungsproblem' a theoretically impossible mathematical and computer science problem. This problem asks for an input that will universally be yes or no. At the time of conception there was no clear answer and stumped researchers for years. While no true, correct answer to the problem exists, Church's findings lead to his development of creating Lambda Calculus.
+        
+        \medskip Enough time passed and the creation of computers started to take the world by storm. Early programming languages were effective but not up to par with mathematicians standards. Eventually programmers got the idea to utilize Church's work in Lambda Calculus and implement it into a functional programming language. With many different languages existing throughout the world, issues revolving around cross platform inefficacy started to arise. 
+        
+        \subsubsection{Haskell's Primary Usage}
+        In the year 2021, it is nearly impossible to find someone who has worked with Haskell and even more rare to find a college student who knows what the functional programming language is. Companies in the private sector have actually used Haskell in their past in some way or another, including Google, Facebook, Microsoft, and Intel, but not for a long period of time\footnote{\href{https://engineering.fb.com/2015/06/26/security/fighting-spam-with-haskell/}{Fighting spam with Haskell}}. As technology progressed new software was developed and left Haskell in the past. However before its demise, the language was able to prove helpful to a lot more companies than just the ones listed above. Some overseas companies in the Netherlands and Germany used Haskell to handle all the accounting and financial aspects of business. Other companies were able to utilize the language for different uses as well. For instance The New York Times, around 2013, brought in a programmer named Erik to talk to an audience about the use of Haskell within the company.\footnote{\href{https://www.infoq.com/presentations/haskell-newsroom-nyt/}{Erik Hinton: Haskell in the Newsroom}} Erik Hinton talked about the initial backlash he received when trying to implement Haskell in the company and his eventual accomplishment of developing projects with the language at The New York Times company.
+        
+        \medskip While not many Haskell jobs exist in the world today the need for Haskell programmers is in high demand. 
+
+\subsection{Types in Haskell}
+
+    \subsubsection{Static Typing}
+    As stated earlier, Haskell is a static type system. This means the code will run safer and errors are caught at the instance of compiling, not during execution of actual program. The static typing does not allow a program to run with an error such as an int divided by a string. Furthermore there is no need for variable declaration in Haskell. 
+    
+    \subsubsection{Typeclasses}
+    A new feature to programmers who have familiarized themselves with object oriented programming is typeclasses. These interfaces act as, well an interface, not so much like classes as Java users are comfortable with. These typeclasses act as a definition of a specified behavior and not objects. Some examples of typeclasses are listed below with an example.
+    \medskip
+    \medskip
+    
+    
+    \caption{Haskell Types by Default}
+    \begin{itemize}
+              \item Bool - True/False
+              \item Char - 'x'
+              \item String - 'Haskell'
+              \item Int - 500
+              \item Double - 5.25864753201772342354689721
+              \item Integer - 400250500000
+              \item Float - 5.75
+    \end{itemize}
+    
+    There are some important things to note. First, the Bool type represents a single bit of data True or False which can be broken down to the binary equivalent of 1/0. Bool is the smallest bit value possible inside Haskell. Second would be the difference between an Int and an Integer. Ints are integers but have a maximum input of 2147483647. Any natural numbers greater than that will have to be labeled as 'Integer' because they have no maximum. The ability to have no max does impact performance but not enough to cause failures while compiling. The char typeclass consists of any singular character. Meanwhile a string is just a sequence of chars. Strings will obviously take more performance than a char but a string is actually in the typeclass char. The last two differences to discuss would be floats and doubles. They interact in a similar way to the dynamic of Ints and Integers. Both types are decimal numbers but floats can have a maximum of 23 spaces after the decimal point. On the other hand doubles can hold over 23 places passed the decimal but no more than 52, the maximum amount of places a decimal value can be in Haskell \href{PL}{PL}. One more type not listed, but important to note, would be the Eq typeclass. This class is responsible for equality checking in the code. The way this class is represented is with double equal signs '==' or to check if something is not equals, you would type '/='.
+            
+    
+    \subsubsection{Type Inference}
+    The interpreter has type inference as well. The auto detection is sophisticated enough to deduce which type is being used in what instance. Most experienced programmers have to tell the IDE what type a variable is when it is declared. Having to unlearn the declaration is difficult because the sheer amount of times it has been done has made it such a habit for most individuals.
+    
+    \medskip\noindent Now that type inference is understood, its time to see an example. Let's take a look at how Haskell varies from other languages, Java will be the contrasting language in this case.
+    \begin{lstlisting}
+    --Setting Types in Java--
+    int x;
+    public timesTwo(){
+        x = x + x;
+        return x;
+    }
+    \end{lstlisting}
+    
+    \medskip
+    Java needs the user to tell it what variable types are before manipulating them. The programmer must declare 'x' an integer or else the compiler will have issues trying to figure out whether x is an integer, float, string, etc. This is not the problem with Haskell's type inference.
+    
+    \begin{lstlisting}
+    --Setting Types in Haskell--
+    addN :: NN -> NN -> NN
+    addN O m = m
+    addN (S n) m = S (addN n m)
+    \end{lstlisting}
+    
+    \noindent This example was taken directly from \href{PL}{PL} Assignment 1. Here our group was tasked with implementing a calculator application within Haskell. We were given a template arithmetic file we changed to have operations. The first line does not require a declaration for 'addN' because the other side of the equals sign infers the operation is adding natural numbers. In the final line the code is indicating the computer takes the successor of the declared variable 'n'. This system of programming is different than most modern languages but is, in same ways, more efficient. As you can see, Haskell can require a lot less to complete the same sort of declaration.
+    
+\subsection{Functions}
+    
+    \subsubsection{Creating Functions}
+    The process of creating a function is not much different than in C/C++ or Java. The way you start is by naming the function you are creating. I will name the function 'timesTwo' and the function will double the inputted number. In two short lines you can create a mathematical equation like the one listed below. 
+    
+    \begin{lstlisting}
+    timesTwo :: Integer -> Integer
+    timesTwo x = x + x 
+    \end{lstlisting}
+    
+    \medskip
+    The first line of this function is the declaration. The function is called 'timesTwo' and it will take an Integer parameter and outputs an Integer as well. The next line is where we actually define the function. This lines purpose is to illustrate what is happening when we eventually call this function. Here timesTwo will take an integer parameter, add it to itself and return the value of the equation. 
+    
+    \medskip
+    As you can see it is pretty simple. Now creating functions and understanding all the intricacies it has to offer are two completely different things. 
+    
+    \subsubsection{Curried Functions}
+    When creating functions in Haskell, the user created function requires only one parameter, no more and no less. That is the case with most functions but not all. In Haskell we have access to a unique trick called Curried Functions. These functions behave differently than regular define functions because they can take more than one parameter. In reality the functions are only taking in one parameter but the function is nested with other function calls. Each variable is in a specific sequence to complete the desired task. Below is an example of how to code a Curried Function and the command line inputs to execute it. 
+    
+    \begin{lstlisting}
+    --Haskell Code--
+    maxNum :: (Ord x) => x -> x -> x 
+    
+    --Command Line Input--
+    maxNum 5 10 || (maxNum 5) 10
+    10
+    \end{lstlisting}
+    
+    Initially the code is doing a very simple job. The arrows tell the machine to add an x into a function and then added again. Meanwhile in the command line there are a couple different ways to execute this function of finding the max number. The Parenthesis can almost be ignored in these types of functions because the white space and parenthesis act as an operation in itself.
+    
+    \subsubsection{Lists}
+    Something you have created for a trip to the grocery store is present in Haskell. Much like modern languages have implemented, Haskell was ahead of its time when it utilized the list structure. This data structure is homogeneous and can hold a sequence of the same data type. For instance a list can be made up entirely of chars or entirely of Ints. The only restriction is you cannot have two different data types in one list. Lists are defined by square brackets '[]' and each value is separated by a comma. 
+    
+    \begin{lstlisting}
+    let listEx = [1,2,3,4,5]
+    listEx
+    [1,2,3,4,5]
+    \end{lstlisting}
+    
+    Here the 'let' phrase is in charge of naming the list that is being declared. Creating a list is as easy as naming it and inputting what values you desire into the brackets. As long as all the values are the same data type creating a list is quick and efficient way to organize and manipulate data. Another usefulness to list is the ability to combine with like data types. If you have two separate lists that are both Ints or both only contain chars, then you can combine the lists into one using the '++' operation. When combining chars or strings a space will be needed if constructing a phrase. In order to complete this you will need to add double quotes with a white space in between.
+    
+    \begin{lstlisting}
+    [1,2,3,4,5] ++ [6,7,8,9,10]  
+    Output: [1,2,3,4,5,6,7,8,9,10]
+    
+    [P,r,o,g,r,a,m,m,i,n,g] ++ " " ++ [L,a,n,g,u,a,g,e,s]
+    Output: Programming Languages
+    \end{lstlisting}
+    
+    Lists inside Haskell are simple to create, manipulate and can be very useful to a programmer if utilized to the best of their ability. A fun key feature with lists that any programmer can use is indexing. Indexing can be done with a string but mainly inside a list to find a specific value. The way to index a value is very simple; First you enter the list, string, integer, etc. followed by double exclamation points, lastly followed by what index you want to search. An example of how to accomplish this is below. 
+    
+    \begin{lstlisting}
+    let sampleList = [1,3,5,7,9]
+    sampleList !! 1
+    Output: 3
+    \end{lstlisting}
+    
+    Indexing is a valuable skill to learn whether it be for finding certain data values or replacing/adding values into a list. As important as indexing is, there are quite a few more commands that can manipulate lists in Haskell. Here are some more to familiarize yourself with.
+    
+    \medskip\medskip
+    \caption{Haskell List Commands}
+    \begin{itemize}
+              \item head [...] - returns the first element within a list
+              \item last [...] - returns the last element in a list
+              \item length [...] - outputs the length of a list based on how many elements are inside
+              \item drop # [...] - staring from index 0, start of list, drops the number of elements inputted from list
+              \item maximum [...] - outputs the largest value within a list
+              \item minimum [...] - outputs the smallest value within a list
+              \item sum [...] - takes all integers in a list and returns the summation, cannot work with strings
+    \end{itemize}
+    
+    \medskip
+    \noindent Obviously this is not the full extent of all the commands possible but these are a great starting point if you are learning Haskell for the first time. 
+
+\subsection{Custom Structure}
+Haskell is equipped with customization if you can adequately structure your program. Maneuvering the intricacies of Haskell will take time to understand so making mistakes is encouraged, because failing is the best teacher. The functional programming language has the option to create your own data types if your code requires more than the default data structures given. 
+
+    \subsubsection{Custom Data Types}
+    Creating your own data type or structure can be done several ways. One of the simpler ways is to use the 'data' keyword. To set up this function, you would type in the command line 'data' followed by the type you want to create. An equals sign separates the function in to two parts. On the second half, the constraints are to be determined. These constraints can vary from only two values to the limit Haskell can handle. The way to add more values is to list them on the right side of the equals sign '=' and separate them with the or function (pipe key for Java/Python programmers).
+    
+    \begin{lstlisting}
+        data suit = Hearts | Diamonds | Clubs | Spades 
+        data value = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13  
+        data Card = (suit, value)
+    \end{lstlisting}
+    
+    Here we are creating a data type and calling it Card. Before we can make a card, however, we need to use specific parameters that make up a deck. If you are not familiar with playing cards there are two specifications that make each one unique. Out of the fifty-two cards in a deck there are four suits and each suit has thirteen values (1-10, Jack, Queen, King). In this example I started by creating the two constraints that will be going into the card data type, suit and value. The Ace is denoted by integer one, two through ten are as printed on each card, and numbers eleven through thirteen coordinate to Jack through King. Lastly the suit is a user created data type that will equal one of four strings. We could group the cards in a list called deck, with a collection of the fifty-two 'Cards' but for simplicity's sake, this would do the job it is intended for. Now you have the ability to create
+    
+    \subsubsection{Custom Itemized List}
+    Let's take a look at what it looks like to create a profile of a college student here at Chapman. We'll start by defining a new type 'Student' and it will take inputs of characteristics of a student.
+    
+    \medskip
+    \begin{lstlisting}
+        data Student = Student String String String String Float
+        
+        first :: Person -> String  
+        first (Person first _ _ _ _ ) = first
+          
+        lastN :: Person -> String  
+        lastN (Person _ lastn _ _ _ ) = lastn
+          
+        standing :: Person -> String  
+        standing (Person _ _ standing _ _ ) = standing
+          
+        major :: Person -> String  
+        major (Person _ _ _ major _ ) = major
+          
+        gpa :: Person -> Float  
+        gpa (Person _ _ _ _ gpa ) = gpa
+        
+        Here the underscores '_' are serving as a place holder for this list's values
+    \end{lstlisting}
+    
+    \noindent The new Student data type will display a first name, last name, academic standing, major, and grade point average. To better illustrate how to actually input the details we will just follow the outline of the data type Student inputted at the beginning. To begin we'll use the 'let' command already implemented in Haskell
+    
+    \begin{lstlisting}
+        let me = Student "Connor" "Cowher" "Senior" "Computer Science" 3.50
+    \end{lstlisting}
+    \noindent Here we make a reference to the Student data type and name it 'me'. I input the items and their correct types that correspond to the Student type, String String String String Float. With that command a student is created and we can pick and choose what to see. For instance if I were to type in 'me' into the command line, all 4 Strings and singular Float would be outputted on the screen. If this list were to hold more than one student and you wanted to find the Connor's major, you could have Haskell only return that item. All you would need to do is type in 'major' followed by 'me' and the interpreter would return Computer Science since we inputted that earlier. 
+    
+\subsection{Haskell Input and Output}
+    \subsubsection{Understanding Functional Language}
+    As a seasoned Java programmer one of the hardest changes to make in Haskell is understanding the difference between a functional programming language and an imperative language. The biggest difference is when a programmer is compiling the finished program for testing. In languages like C/C++ or Python a functioning program will look like a series of instructions that allows the computer to complete a specific task or function. A well structured imperative language program with functions has lines that will have some sort of impact on the computer's memory. Where Haskell is different is the fact that lines in the program define a state rather than complete a task. It sounds confusing but after seeing a few examples and struggling through your first program will teach you a lot. 
+    
+    \medskip
+    \caption{Java Hello World}
+    \begin{lstlisting}
+              public static void main(String[] args){
+                    System.out.println("Hello World!");
+              }
+    \end{lstlisting}
+    
+    \medskip
+    \caption{Haskell Hello World}
+    \begin{lstlisting}
+              main = putStrLn "Hello World!"
+    \end{lstlisting}
+    
+    \medskip
+    Here some glaring differences are shown. The first contrast between the two is the lack of ending syntax for Haskell. Java requires a semicolon after every line, unless you are defining a function, to indicate when a line is done and the interpreter can jump to the next step in the code. Another thing to note is the Java example of Hello World is as simple as you can make it, the current form is not proper writing structure but does the job introducing the syntax to new programmers. A second difference between an imperative language and a functional language is Haskell can accomplish the same thing as Java can but do it in fewer lines. This is beneficial to programmers because shorter files with less lines of code usually equate to less bugs and problems when compiling. One last distinction between the two softwares is how much control Java/C gives you versus the safety net that Haskell gives the user. There are a great number of possibilities of programs a user can create with imperative languages due to the freedom those languages grant. Having the freedom is great and all until you run into compiling problems and a program riddled with bugs and warnings. 
+    
+    \subsubsection{Making a Program}
+    So far the examples in this tutorial have shown you the basics and how to start creating a file for execution. As shown above Haskell can take the input 'main' at the beginning of the program. Main acts as the starting point of the program. Java requires a much longer main line where it contains all the function calls and ordering of the program you are running, Haskell does not have that capability because order does not matter. 
+    
+    \medskip A new and fun way to test your code in Haskell that differs from Java is that the interpreter does not have a built in compiler button to quickly test your program. A simple way to work around this inconvenience is to have a terminal open in another window and cc-ing to the folder with the Haskell file located in it. After making your way to the file the next thing you want to do is type in "gch --make ~fileName~". After completing this input an executable file should have made its way into the folder you're currently in. This file is the one that will be executed. If we did "gch --make helloworld.h" in the previous step, the only thing left to do is run it and test the output. A simple ./helloworld will run the code that was created in the last sections code. 
+    
+    \begin{lstlisting}
+              --make helloworld.h
+              ...
+              ./helloworld
+              Hello World!
+    \end{lstlisting}
+    
+    \noindent That is all it takes to compile and run your code for testing.
+    
+    \medskip
+    \subsubsection{Understanding Input Output}
+    Having a properly functioning program is one thing, but what if you wanted an application to interact with the user and have outputs for the programmer set? This is where a couple of useful commands come in to play. Luckily for new Haskell users, these I/O operations come default when you download Haskell so there is no need to create your own.  
+    
+    \lstinline{putStrLn}
+    
+    \smallskip
+    \lstinline{getLine}
+    
+    putStrLn is an Input/Output operation that takes in a String and displays it to the screen. If we are programming an application that requires user input we would use the putStrLn to prompt the user for any information required for the process to work. Some programmers might have used the keyword print in the past or a variation of it. putStrLn is the Haskell equivalent to print and will return a an empty line, perfect for someone to input a String or Int, whatever the program calls for. getLine works in the opposite way of putStrLn in that it will return the input the user types. This command will stop and wait for an input and only works when an outside force presses return on the terminal.
+
+\section{Programming Languages Theory}
+    \subsection{Lambda Calculus}
+    Traveling back in history to around 1930 is where the theory of Lambda Calculus begins. As mentioned earlier and not for the last time is the person who helped develop the functional programming languages we utilize today, Alonzo Church. Church is the father of theory and has developed many tools for computing that are still in use to this day. One of the most notable theories he conceived is Lambda Calculus. In short, Lambda Calculus is a operations and rules that make function abstraction possible. Let's take a look at an example of an abstraction function written in Haskell
+    
+    \medskip
+              \lambda a.a
+    \medskip
+    
+    \noindent That is all there is to it. The first thing to break down about this simple input is the lambda symbol. Like in many other languages Haskell requires a symbol to denote the start of a function. We accomplish this by using lambda at the start of the line. After that you must define the parameters of the function and end the list with a '.'. The second a in the example is known as the body of the function. This part of the code will be returned when the function is called in the compiler. Some vocabulary to know is the variable in the example above is known as bound because the 'a' appears in both the parameters and the function body. If there were to only be one 'a' on one side of the '.' then the variable would be labeled as free. Bound and free are self explanatory but in short, a free variable indicates the function depends on the variable and a bound variable does not. 
+        \subsubsection{Applications of Lambda Calculus}
+        Writing a lambda function is one thing to master and applying it to another function can be a difficult thing to learn. First of all, lambda functions are anonymous and do not have a name when being used. These functions differ from others because they do not take in variables. Instead they are nested by other functions 
+    
+        \subsubsection{Church Numerals}
+        Church numerals can be defined as the act of applying a function to a value, any number of times. The amount of times it is applied is added onto the end of 'church number n' where n denotes the number.
+        
+        \medskip
+             (\lambda λ f a . (f (f (f (f a)))))
+        \medskip
+    
+    This here is church number 4; meaning it is an action that applies a function, f, to a value, 'a', 4 times \footnote{Programming Languages}.
+        
+    \subsection{Parsing}
+    Parsing is a topic in Lambda Calculus that is similar to curried functions. The definition of a Parser is a component of an interpreter, which parses the source code of a programming language to create a form of internal representation. However in order to fulling grasp this idea we need to learn about pattern matching and recursion
+        
+        \subsubsection{Pattern matching}
+        Pattern matching is syntax in Haskell that takes in a specific pattern and checks it with new data to see if it will be in accordance with the given pattern. The useful part is it can be utilized with any type of data Haskell comes default with. To make use of pattern matching you will have to define a function with the specific pattern. The purpose of pattern matching in Haskell is to help simplify your code and leave less room for errors. Creating a factorial function will help put this into a better perspective. 
+        
+        \begin{lstlisting}
+            factorial :: Integer -> Integer 
+            
+            factorial 0 = 1
+            factorial a = a * factorial(a - 1)
+        \end{lstlisting}
+        
+        \noindent Here we have the function declaration again where the function factorial will input an Integer and return an Integer. Next we create a pattern for the function to follow. In a factorial a number is taken and multiplied by the number directly beneath it.That operation happens again and again until you reach 0. Obviously you do not want to do all those calculations just for your answer to be 0. So the first step in preventing that is to make sure when you get 0 as an input, its value is changed to one. Next you can get on to building the sequence. You would start by taking the parameter set by the user, 'a' in this example, and multiplying it by the value of 'a' minus one. That would be all we need to do if our application would only take in 2, 1, or zero. Obviously having a limit of three inputs would not be a productive use of code. To combat this, we can utilize recursion to save space and make our code run more efficiently. As touched upon in curried functions, the factorial function will call factorial within itself. 
+        
+        \subsubsection{Recursion}
+        Recursion is hopefully not a foreign topic to you as it is very useful within the inter workings of a functional programming language. The example above showed you the basics of recursion, keep doing an operation until a condition is met. As mentioned earlier recursion is the act of calling a function in the definition of that same function.
+        
+        \subsubsection{Parsing Continued}
+        With a better understand of pattern matching and recursion we can dive deeper into the theory of parsing. Parsing is taking a concrete syntax and transforming it into an abstract syntax, meaning it will take in a input of characters and applies logic to conform to the software. 
+        
+\subsection{String Rewriting}
+
+    \subsubsection{Normal Forms}
+    
+\subsection{Hoare Logic}
+    
+
+\section{Project}
+
+Projects in Haskell are much more intensive and require more time to accomplish the task you wish to complete. The biggest piece of advice I suggest would be it is okay to not get it immediately. Haskell is great for new open minded individuals but experienced programmers might struggle to switch gears into this new world. Baseball players struggle to hit golf balls because the swing is so different and it is the exact same concept here. In Programming Languages at Chapman University we started to use Haskell with a calculator project. In this section I will show you how to extend the calculator application even further than what we accomplished in class.
+
+\section{Conclusions}\label{conclusions}
+
+So in conclusion we have gone over quite a bit of subjects regarding Haskell and its basics to understand completely before undertaking an assignment of your own. While having previous knowledge and experience is usually a benefit to your cause, Haskell might put that notion to the test. Something as simple as adding positive numbers can cause so many problems to programmers' complicated structured brains. 
+
+\begin{thebibliography}{99}
+\bibitem[PL]{PL} \href{https://github.com/alexhkurz/programming-languages-2021/blob/main/README.md}{Programming Languages 2021}, Chapman University, 2021.
+
+\bibitem[serokell.io]{https://serokell.io/blog/haskell-history}
+\href{https://serokell.io/blog/haskell-history}{History of a Community-Powered Language}
+
+\bibitem[infoq.com]{https://www.infoq.com/presentations/haskell-newsroom-nyt/}
+{\href{https://www.infoq.com/presentations/haskell-newsroom-nyt/}{Haskell in the Newsroom}}
+
+\end{thebibliography}
+
+\end{document}
