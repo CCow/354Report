@@ -57,31 +57,10 @@ This report will dive into the aspects of learning Haskell and the functions to 
 
 \section{Introduction}\label{intro} 
 
-Haskell is a programming language where it may take some time to understand all the features and nuances. One aspect where Haskell differs from the common universal languages is being "lazy". This means Haskell will not do any work unless it needs to be completed. It is as close to assembly language we have had in all of the courses Chapman offers. With learning Haskell, you do not necessarily have to have the most extensive programming experience or knowledge. Haskell is so vastly different from all other languages that it makes it the perfect starting point. Although learning something so different and unique has its advantages, being skilled in mathematics has its benefits to this language. Much of the beginning is understanding and interpreting basic mathematics in different formats. Something as simple as a basic calculator proves its challenges and will make you have an appreciation for everyday programs we use without an extra thought. Since most students taking this course are upperclassmen, that does imply a more extensive understanding than most individuals so we can assume this isn’t our first time learning a new language. Assembly language is vastly different from interpreter languages as one knows, but understanding how the integers and and negative numbers work with different operations will take some time. Firstly, functions are unique in the way they are created. There are multiple classes that must work hand in hand to make a program function correctly. The first assignment for Programming Languages was to create, from a template, a calculator and make our own operations. With a partner we concluded to do our basic 4 mathematical operations and added a couple more, commonly found on a TI-84 calculator. While these other operations, square root, squared, etc. are simple in theory, creating a function that can handle any type of input proves much harder to accomplish. With that out of the way we can dive into the beginning of starting this language. To begin, you should start downloading Haskell by visiting … (insert download link). 
+Haskell is a programming language where it may take some time to understand all the features and nuances. One aspect where Haskell differs from the common universal languages is being "lazy". This means Haskell will not do any work unless it needs to be completed. It is as close to assembly language we have had in all of the courses Chapman offers. With learning Haskell, you do not necessarily have to have the most extensive programming experience or knowledge. Haskell is so vastly different from all other languages that it makes it the perfect starting point. Although learning something so different and unique has its advantages, being skilled in mathematics has its benefits to this language. Much of the beginning is understanding and interpreting basic mathematics in different formats. Something as simple as a basic calculator proves its challenges and will make you have an appreciation for everyday programs we use without an extra thought. Since most students taking this course are upperclassmen, that does imply a more extensive understanding than most individuals so we can assume this isn’t our first time learning a new language. Assembly language is vastly different from interpreter languages as one knows, but understanding how the integers and and negative numbers work with different operations will take some time. Firstly, functions are unique in the way they are created. There are multiple classes that must work hand in hand to make a program function correctly. The first assignment for Programming Languages was to create, from a template, a calculator and make our own operations. With a partner we concluded to do our basic 4 mathematical operations and added a couple more, commonly found on a TI-84 calculator. While these other operations, square root, squared, etc. are simple in theory, creating a function that can handle any type of input proves much harder to accomplish. With that out of the way we can dive into the beginning of starting this language. To begin, you should start downloading Haskell by visiting \href{https://hackmd.io/@alexhkurz/Hk86XnCzD}{this link}.
 
 \medskip\noindent
 After familiarizing yourself with the UI and paths needed to have interacting classes, a beneficial task to complete would be to go back and understand lambda calculus. A majority of functions will require some knowledge of lambda calculus and understanding it would fast track any issues you run into while coding any mathematical functions in Haskell. 
-
-
-    \subsection{General Remarks}
-    Everything below here is used for template purposes and will not be included in my report in its current form. 
-    ~~Work in progress below~~
-    
-    
-     $$x+y=y+x.$$
-    
-    
-    \subsection{Itemize and numbered lists template}
-    
-    \begin{itemize}
-    \item This is how you itemize in LaTeX.
-    \begin{enumerate}
-    \item \href{https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes}{Learn LaTeX in 30 minutes}
-    \item \href{https://www.latex-project.org/}{LaTeX – A document preparation system}\end{enumerate}
-    \end{itemize}
-    \medskip\noindent
-    
-    ~~Delete Above L8r~~
     
 \section{Haskell}\label{haskell}
 
@@ -100,18 +79,28 @@ After familiarizing yourself with the UI and paths needed to have interacting cl
         \subsubsection{Haskell's Primary Usage}
         In the year 2021, it is nearly impossible to find someone who has worked with Haskell and even more rare to find a college student who knows what the functional programming language is. Companies in the private sector have actually used Haskell in their past in some way or another, including Google, Facebook, Microsoft, and Intel, but not for a long period of time\footnote{\href{https://engineering.fb.com/2015/06/26/security/fighting-spam-with-haskell/}{Fighting spam with Haskell}}. As technology progressed new software was developed and left Haskell in the past. However before its demise, the language was able to prove helpful to a lot more companies than just the ones listed above. Some overseas companies in the Netherlands and Germany used Haskell to handle all the accounting and financial aspects of business. Other companies were able to utilize the language for different uses as well. For instance The New York Times, around 2013, brought in a programmer named Erik to talk to an audience about the use of Haskell within the company.\footnote{\href{https://www.infoq.com/presentations/haskell-newsroom-nyt/}{Erik Hinton: Haskell in the Newsroom}} Erik Hinton talked about the initial backlash he received when trying to implement Haskell in the company and his eventual accomplishment of developing projects with the language at The New York Times company.
         
-        \medskip While not many Haskell jobs exist in the world today the need for Haskell programmers is in high demand. 
+        \medskip \noindent Some might question what is the point of learning such an out dated and somewhat abandoned programming language in this day and age. While not many Haskell jobs exist in the world today the need for Haskell programmers is in high demand. Also having the extensive knowledge of a functional programming language will set you apart from other newly graduated computer scientists. Obviously knowing how to use imperative languages in today's world is helpful, having to understand Haskell can grant you a bigger advantage with life lessons and job experience before you enter the private sector.
 
 \subsection{Types in Haskell}
 
     \subsubsection{Static Typing}
-    As stated earlier, Haskell is a static type system. This means the code will run safer and errors are caught at the instance of compiling, not during execution of actual program. The static typing does not allow a program to run with an error such as an int divided by a string. Furthermore there is no need for variable declaration in Haskell. 
+    As stated earlier, Haskell is a static type system. This means the code will run safer and errors are caught at the instance of compiling, not during execution of actual program. The static typing does not allow a program to run with an error such as an int divided by a string. Furthermore there is no need for variable declaration in Haskell. Comparatively to imperative programming languages, Haskell will require a lot less testing resulting in a decrease of trial and error. This is accomplished due to Haskell's ability to find problems at the source and not wait until compile time to warn the user. However some drawbacks do exist within a functional programming language like Haskell. 
+    
+    \medskip
+    \caption{Disadvantages in Haskell}
+       \begin{enumerate}
+           \item Mastering takes upwards of months of learning
+           \item More redundant lines of code
+           \item Writing and testing code can take longer than Imperative languages
+           \item Strictly available on computers; no phones can run Haskell
+           \item Initially difficult to navigate user interface 
+        \end{enumerate}
+        
+    \noindent Every software or programming language will have its pros and cons so understanding its short comings is vital to overcoming the challenges presented. Haskell is not an easy step for most people, especially since it varies from most modern mainstream IDEs like Java and C++. 
     
     \subsubsection{Typeclasses}
     A new feature to programmers who have familiarized themselves with object oriented programming is typeclasses. These interfaces act as, well an interface, not so much like classes as Java users are comfortable with. These typeclasses act as a definition of a specified behavior and not objects. Some examples of typeclasses are listed below with an example.
     \medskip
-    \medskip
-    
     
     \caption{Haskell Types by Default}
     \begin{itemize}
@@ -128,7 +117,7 @@ After familiarizing yourself with the UI and paths needed to have interacting cl
             
     
     \subsubsection{Type Inference}
-    The interpreter has type inference as well. The auto detection is sophisticated enough to deduce which type is being used in what instance. Most experienced programmers have to tell the IDE what type a variable is when it is declared. Having to unlearn the declaration is difficult because the sheer amount of times it has been done has made it such a habit for most individuals.
+    The interpreter has type inference as well. The auto detection is sophisticated enough to deduce which type is being used in what instance. Most experienced programmers have to tell the IDE what type a variable is when it is declared. One way of looking at it is in imperative programming languages a programmer is giving the computer a set of commands to execute in a specified order of operations. On the other hand functional programming languages only have expressions that will change state when evaluated by the interpreter. Some functions and print statements in modern languages serve as steps to get to the next point of the program. Haskell demands that every line that has a double colon or an equals sign will have a certain type. If you use the Haskell compiler GHC you will never have to worry about mistyping a variable because of the built in type inference and Haskell's educated guessing. 
     
     \medskip\noindent Now that type inference is understood, its time to see an example. Let's take a look at how Haskell varies from other languages, Java will be the contrasting language in this case.
     \begin{lstlisting}
@@ -150,7 +139,7 @@ After familiarizing yourself with the UI and paths needed to have interacting cl
     addN (S n) m = S (addN n m)
     \end{lstlisting}
     
-    \noindent This example was taken directly from \href{PL}{PL} Assignment 1. Here our group was tasked with implementing a calculator application within Haskell. We were given a template arithmetic file we changed to have operations. The first line does not require a declaration for 'addN' because the other side of the equals sign infers the operation is adding natural numbers. In the final line the code is indicating the computer takes the successor of the declared variable 'n'. This system of programming is different than most modern languages but is, in same ways, more efficient. As you can see, Haskell can require a lot less to complete the same sort of declaration.
+    \noindent This example was taken directly from \href{PL}{PL} Assignment 1. Here our group was tasked with implementing a calculator application within Haskell. We were given a template arithmetic file we changed to have operations. The first line does not require a declaration for 'addN' on the left side of the colons because the other side infers the operation is adding natural numbers. We added this first line at the top level for added security that our add function will be taking in two sets of natural numbers and returning one natural number. This should only be done when working with functions, like in the example above, or one line expressions where no reference was made previously. The final line the code is indicating the computer takes the successor of the declared variable 'n'. This system of programming is different than most modern languages but is, in some ways, more efficient. As you can see, Haskell can require a lot less to complete the same sort of declaration.
     
 \subsection{Functions}
     
@@ -166,7 +155,7 @@ After familiarizing yourself with the UI and paths needed to have interacting cl
     The first line of this function is the declaration. The function is called 'timesTwo' and it will take an Integer parameter and outputs an Integer as well. The next line is where we actually define the function. This lines purpose is to illustrate what is happening when we eventually call this function. Here timesTwo will take an integer parameter, add it to itself and return the value of the equation. 
     
     \medskip
-    As you can see it is pretty simple. Now creating functions and understanding all the intricacies it has to offer are two completely different things. 
+    As you can see it is pretty simple. One thing to make note of is the use of if-else statements. In Java/C++ you could get away with using an if statement and not concluding it with an if-else/else clause. That is not the case with Haskell. If you utilize an if statement, then an else statement on the same level is required to catch all other exceptions. Now creating functions and understanding all the intricacies it has to offer are two completely different things. This introduction is not meant to overwhelm you but slowly establish a foundation to work off of.
     
     \subsubsection{Curried Functions}
     When creating functions in Haskell, the user created function requires only one parameter, no more and no less. That is the case with most functions but not all. In Haskell we have access to a unique trick called Curried Functions. These functions behave differently than regular define functions because they can take more than one parameter. In reality the functions are only taking in one parameter but the function is nested with other function calls. Each variable is in a specific sequence to complete the desired task. Below is an example of how to code a Curried Function and the command line inputs to execute it. 
@@ -272,6 +261,8 @@ Haskell is equipped with customization if you can adequately structure your prog
     \end{lstlisting}
     \noindent Here we make a reference to the Student data type and name it 'me'. I input the items and their correct types that correspond to the Student type, String String String String Float. With that command a student is created and we can pick and choose what to see. For instance if I were to type in 'me' into the command line, all 4 Strings and singular Float would be outputted on the screen. If this list were to hold more than one student and you wanted to find the Connor's major, you could have Haskell only return that item. All you would need to do is type in 'major' followed by 'me' and the interpreter would return Computer Science since we inputted that earlier. 
     
+    \subsubsection{New Constructors}
+    
 \subsection{Haskell Input and Output}
     \subsubsection{Understanding Functional Language}
     As a seasoned Java programmer one of the hardest changes to make in Haskell is understanding the difference between a functional programming language and an imperative language. The biggest difference is when a programmer is compiling the finished program for testing. In languages like C/C++ or Python a functioning program will look like a series of instructions that allows the computer to complete a specific task or function. A well structured imperative language program with functions has lines that will have some sort of impact on the computer's memory. Where Haskell is different is the fact that lines in the program define a state rather than complete a task. It sounds confusing but after seeing a few examples and struggling through your first program will teach you a lot. 
@@ -337,7 +328,7 @@ Haskell is equipped with customization if you can adequately structure your prog
              (\lambda λ f a . (f (f (f (f a)))))
         \medskip
     
-    This here is church number 4; meaning it is an action that applies a function, f, to a value, 'a', 4 times \footnote{Programming Languages}.
+    \noindent This here is church number 4; meaning it is an action that applies a function, f, to a value, 'a', 4 times \footnote{Programming Languages}.
         
     \subsection{Parsing}
     Parsing is a topic in Lambda Calculus that is similar to curried functions. The definition of a Parser is a component of an interpreter, which parses the source code of a programming language to create a form of internal representation. However in order to fulling grasp this idea we need to learn about pattern matching and recursion
@@ -355,16 +346,74 @@ Haskell is equipped with customization if you can adequately structure your prog
         \noindent Here we have the function declaration again where the function factorial will input an Integer and return an Integer. Next we create a pattern for the function to follow. In a factorial a number is taken and multiplied by the number directly beneath it.That operation happens again and again until you reach 0. Obviously you do not want to do all those calculations just for your answer to be 0. So the first step in preventing that is to make sure when you get 0 as an input, its value is changed to one. Next you can get on to building the sequence. You would start by taking the parameter set by the user, 'a' in this example, and multiplying it by the value of 'a' minus one. That would be all we need to do if our application would only take in 2, 1, or zero. Obviously having a limit of three inputs would not be a productive use of code. To combat this, we can utilize recursion to save space and make our code run more efficiently. As touched upon in curried functions, the factorial function will call factorial within itself. 
         
         \subsubsection{Recursion}
-        Recursion is hopefully not a foreign topic to you as it is very useful within the inter workings of a functional programming language. The example above showed you the basics of recursion, keep doing an operation until a condition is met. As mentioned earlier recursion is the act of calling a function in the definition of that same function.
+        Recursion is hopefully not a foreign topic to you as it is very useful within the inter workings of a functional programming language. The example above showed you the basics of recursion, keep doing an operation until a condition is met. As mentioned earlier recursion is the act of calling a function in the definition of that same function. When creating a recursive function you need to have an exit strategy or else the function will repeat forever and the computer must give up at some point. To prevent this from happening we utilize edge conditions to help the computer terminate the recursion when a specific condition is met. For instance lets take a look at the factorial function again.
+        
+        \begin{lstlisting}
+            factorial 0 = 1
+            --edge condition, cannot decrease less than 0
+            
+            factorial a = a * factorial(a - 1)
+            --factorial is used to define its own definition
+        \end{lstlisting}
+        
+        \noindent Here we place factorial 0 = 1 at the beginning of the function because when we use the factorial expression, you keep multiplying n - 1 until you reach 0. If you were to multiply the zero into the sequence then your function wouldn't work and zero would always be your answer. 
+        
+        \medskip
+        \noindent A very under looked aspect of Haskell is the combination of recursion and pattern matching. With an imperative programming language like Java or C/C++ creating a factorial function requires a lot of lines and multiple if-else statements. Haskell does not have this issue because a simple pattern match tied together with a recursive function can quickly and efficiently create the factorial, or any other mathematical sequential function.
+        
+        \begin{lstlisting}
+            
+        \end{lstlisting}
         
         \subsubsection{Parsing Continued}
-        With a better understand of pattern matching and recursion we can dive deeper into the theory of parsing. Parsing is taking a concrete syntax and transforming it into an abstract syntax, meaning it will take in a input of characters and applies logic to conform to the software. 
+        With a better understand of pattern matching and recursion we can dive deeper into the theory of parsing. Parsing is taking a concrete syntax and transforming it into an abstract syntax, meaning it will take in a input of characters and applies logic to conform to the software. A very important computer scientist who helped with multiple advancements in the field including Parsing was Robert Floyd.
         
 \subsection{String Rewriting}
 
     \subsubsection{Normal Forms}
     
 \subsection{Hoare Logic}
+Switching things up, a new computer scientist we have not discussed helped with programming theory around 1969. This scientist was named Tony Hoare and his contribution to computer programming is immortalized in a logical set of rules for configuring the correctness of a computer. To start, the foundation of Hoare logic begins with Hoare triple, as shown below.
+
+\begin{lstlisting}
+   {O}  C  {P}
+\end{lstlisting}
+
+\noindent In this Hoare triple, the execution changes the state of the computer. Both O and P are boolean expressions that indicate true, unless an unforeseen bug is in the code. The C denotes a command statement between the two expressions. In this example O is considered the precondition since it occurs before the command and P would represent the post condition. To further explain, when the O boolean condition is adhered to, then the command section will execute resulting in the typed P, post condition. 
+
+\medskip
+\caption{Empty Command Logic}
+\begin{lstlisting}
+   {O}  Skip  {O}
+\end{lstlisting}
+
+This very similar structure of Hoare logic states that if no command separates the precondition from the post condition then the computers state stays the same. In short there is no post condition and everything true before the statement remains true after it as well.
+
+\subsection{Monads}
+A new structure being introduced is a monad. Monads are already implemented in Haskell with Input Output and lists. Although the term does not explicitly explain what they do, monads are designed to help make up strategies for problems that occur often so the workflow of your code is consistent and streamlined. At first this is a difficult subject of theory to understand considering there are countless websites and YouTube videos attempting to explain how they work. Haskell luckily has I/O monads, a subject already touched upon in this tutorial. With abilities to check if files are present on a machine to deleting files, I/O monads can prove to be very helpful to programmers who use them.
+
+\medskip
+\caption{Default I/O Monad within Haskell}
+\begin{lstlisting}
+   removeFile :: \Users\CCow\CPSCCourses\CPSC354\test.hs -> IO ()
+   
+   --Here we do not care about an output because the removeFile function is running through the machine to delete the file via the given path
+   
+   doesFileExist :: \Users\CCow\CPSCCourses\CPSC354\test.hs -> IO Bool
+   True
+   --Alternatively here we have a boolean that returns true or false given if a file is in existence via the file path location
+   --Additionally the file path shown here is just an example of how to format the file path to check if a file exists and/or to remove a file
+\end{lstlisting}
+
+\noindent For instance if a programmer attaches an I/O value to a created function, the function will execute commands based solely on the files already present or inputs from the command line. After which a monad value is returned in the form of a system output, displayed on the screen. A way of creating your own monad is with the double greater than symbol, $>>$ on keyboard. Typically when using I/O types in Haskell the programmer would name a value and have a pointer assigned to getLine or putStrLn. However we can now reverse the roles and make the I/O devices do more work. Let's see an example of welcoming a new user into a random database.
+
+\begin{lstlisting}
+   main :: IO
+   main = putStrLn "Welcome, please enter your username"
+        getLine >>= username
+        putStrLn "Hello " ++ username ++ ", the menu screen will load now" 
+        ...
+\end{lstlisting}
     
 
 \section{Project}
@@ -377,6 +426,9 @@ So in conclusion we have gone over quite a bit of subjects regarding Haskell and
 
 \begin{thebibliography}{99}
 \bibitem[PL]{PL} \href{https://github.com/alexhkurz/programming-languages-2021/blob/main/README.md}{Programming Languages 2021}, Chapman University, 2021.
+
+\bibitem[engineering.fb.com]{https://engineering.fb.com/2015/06/26/security/fighting-spam-with-haskell/}
+\href{https://engineering.fb.com/2015/06/26/security/fighting-spam-with-haskell/}{Fighting spam with Haskell}
 
 \bibitem[serokell.io]{https://serokell.io/blog/haskell-history}
 \href{https://serokell.io/blog/haskell-history}{History of a Community-Powered Language}
