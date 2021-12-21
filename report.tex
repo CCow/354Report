@@ -105,7 +105,7 @@ Imperative programming languages are more abundant and require more programmers 
     
     \subsubsection{Typeclasses}
     A new feature to programmers who have familiarized themselves with object oriented programming is typeclasses. Languages like Java or Python have classes that act as objects, with their own properties These interfaces act as, well an interface, not so much like classes as Java users are comfortable with. These typeclasses act as a definition of a specified behavior and not objects. Haskell is equipped with default types but allows users to create their own if they so desire, more on that later. Some examples of common typeclasses are listed below with an example of each.
-    \medskip
+    \clearpage
     
     \caption{Haskell Types by Default}
     \begin{itemize}
@@ -164,6 +164,7 @@ Imperative programming languages are more abundant and require more programmers 
     
     \subsubsection{Curried Functions}
     When creating functions in Haskell, the user created function requires only one parameter, no more and no less. That is the case with most functions but not all. In Haskell we have access to a unique trick called Curried Functions. These functions behave differently than regular define functions because they can take more than one parameter. In reality the functions are only taking in one parameter but the function is nested with other function calls. Each variable is in a specific sequence to complete the desired task. Below is an example of how to code a Curried Function and the command line inputs to execute it. 
+    \clearpage
     
     \begin{lstlisting}
     --Haskell Code--
@@ -205,7 +206,7 @@ Imperative programming languages are more abundant and require more programmers 
     
     Indexing is a valuable skill to learn whether it be for finding certain data values or replacing/adding values into a list. As important as indexing is, there are quite a few more commands that can manipulate lists in Haskell. Here are some more to familiarize yourself with.
     
-    \medskip\medskip
+    \clearpage
     \caption{Haskell List Commands}
     \begin{itemize}
               \item head [...] - returns the first element within a list
@@ -270,7 +271,7 @@ Haskell is equipped with customization if you can adequately structure your prog
     \subsubsection{Understanding Functional Language}
     As a seasoned Java programmer one of the hardest changes to make in Haskell is understanding the difference between a functional programming language and an imperative language. The biggest difference is when a programmer is compiling the finished program for testing. In languages like C/C++ or Python a functioning program will look like a series of instructions that allows the computer to complete a specific task or function. A well structured imperative language program with functions has lines that will have some sort of impact on the computer's memory. Where Haskell is different is the fact that lines in the program define a state rather than complete a task. It sounds confusing but after seeing a few examples and struggling through your first program will teach you a lot. 
     
-    \medskip
+    \clearpage
     \caption{Java Hello World}
     \begin{lstlisting}
               public static void main(String[] args){
@@ -310,7 +311,7 @@ Haskell is equipped with customization if you can adequately structure your prog
     \smallskip
     \lstinline{getLine}
     
-    putStrLn is an Input/Output operation that takes in a String and displays it to the screen. If we are programming an application that requires user input we would use the putStrLn to prompt the user for any information required for the process to work. Some programmers might have used the keyword print in the past or a variation of it. putStrLn is the Haskell equivalent to print and will return a an empty line, perfect for someone to input a String or Int, whatever the program calls for. getLine works in the opposite way of putStrLn in that it will return the input the user types. This command will stop and wait for an input and only works when an outside force presses return on the terminal.
+    \noindent putStrLn is an Input/Output operation that takes in a String and displays it to the screen. If we are programming an application that requires user input we would use the putStrLn to prompt the user for any information required for the process to work. Some programmers might have used the keyword print in the past or a variation of it. putStrLn is the Haskell equivalent to print and will return a an empty line, perfect for someone to input a String or Int, whatever the program calls for. getLine works in the opposite way of putStrLn in that it will return the input the user types. This command will stop and wait for an input and only works when an outside force presses return on the terminal.
 
 \section{Programming Languages Theory}
     \subsection{Lambda Calculus}
@@ -335,6 +336,8 @@ Haskell is equipped with customization if you can adequately structure your prog
     
         \subsubsection{Applications of Lambda Calculus}
         Writing a lambda function is one thing to master and applying it to another function can be a difficult thing to learn. First of all, lambda functions are anonymous and do not have a name when being used. These functions differ from others because they do not take in variables. Instead they are nested by other functions. In every lambda function there exists at least 3 separate parts. They include the variable; logical value or string in the form of a parameter, application; applying function to an argument and lambda abstraction; definition of the function. In the example above the variable listed is the a after the '.'. The lambda abstraction is the whole entity. Lastly the application would be another $\lambda b.b$ following the other lambda abstraction. 
+        
+        
         
         \subsubsection{Capture Avoidance Substitution}
         When the computer performs lambda calculus there are some cases when the variables inside the expression are required to change. When evaluating expressions with lambda calculus the usual route the computer takes is replacing variable names via recursion, more about that later. However in some cases there could be expressions that share the same variable name and would cause the evaluation to stay the same and not perform the operations. Obviously as a programmer you want to avoid this at all costs. To combat this situation, we will employ the help of Capture Avoidance Substitution. CAS is a very helpful strategy to utilize within Haskell to save your code when performing lambda calculus. The most important thing to remember is to switch up variable names when creating a function. For instance when I start a new expression, I name my first variable 'a' then 'b' all the way down the alphabet so no variable will repeat unless more than twenty six exist within that function. However I am not like every programmer and a large majority like to utilize variable names like 'x' and 'y'.
@@ -405,11 +408,13 @@ Haskell is equipped with customization if you can adequately structure your prog
                 }
             }
         \end{lstlisting}
-        Clearly Haskell can complete the same function in much less lines due to the fact it does not require if/else statements in this particular function. With the edge condition, all if/else statements are unnecessary because of pattern matching within Haskell. In addition there is no need to distinguish types in the Haskell definition because teh interpreter can infer the function is an integer equation due to the variable 'a' and gradual decrease to a = 0.
+        Clearly Haskell can complete the same function in much less lines due to the fact it does not require if/else statements in this particular function. With the edge condition, all if/else statements are unnecessary because of pattern matching within Haskell. In addition there is no need to distinguish types in the Haskell definition because the interpreter can infer the function is an integer equation due to the variable 'a' and gradual decrease to a = 0.
         
         \medskip
         \noindent A very under looked aspect of Haskell is the combination of recursion and pattern matching. With an imperative programming language like Java or C/C++ creating a factorial function requires a lot of lines and multiple if-else statements. Haskell does not have this issue because a simple pattern match tied together with a recursive function can quickly and efficiently create the factorial, or any other mathematical sequential function.
         
+        \medskip
+        \noindent Functional programming languages like Haskell tend to perform recursion better than imperative languages. Haskell only allows pure functions, absent of side effects and state, resulting in more efficient and faster compiling times\footnote{\href{https://softwareengineering.stackexchange.com/questions/149167/are-functional-languages-better-at-recursion}{Are functional languages better at recursion}}. No state is required to use recursion so functional languages that allow pure code are best fit for this operation.
         
         
         \subsubsection{Parsing Continued}
@@ -424,7 +429,7 @@ Switching things up, a new computer scientist we have not discussed helped with 
 
 \noindent In this Hoare triple, the execution changes the state of the computer. Both O and P are boolean expressions that indicate true, unless an unforeseen bug is in the code. The C denotes a command statement between the two expressions. In this example O is considered the precondition since it occurs before the command and P would represent the post condition. To further explain, when the O boolean condition is adhered to, then the command section will execute resulting in the typed P, post condition. 
 
-\medskip
+\clearpage
 \caption{Empty Command Logic}
 \begin{lstlisting}
    {O}  Skip  {O}
@@ -460,6 +465,19 @@ A new structure being introduced is a monad. Monads are already implemented in H
 \end{lstlisting}
 
 \noindent Monad are a tricky structure to understand in Haskell. The comparison that helps draw the points together is when you program in an imperative language, you have to use semicolons to denote where a line is finished. Monads are in a way, a programmable semicolon for functional languages where the user does not have to put in the work for entering the combination manually. The monad will automatically determine how the combined computations translate into a new state of computation\footnote{\href{https://wiki.haskell.org/All_About_Monads}{All about Monads}}. Monad are statically typed and work to free up time and energy for the user who can best utilize the structure.
+
+\medskip\noindent As mentioned earlier there are numerous monads already loaded inside Haskell. Some of which are better suited in conjunction with a separate parser library. With monad classes existing in libraries, Monad and MonadPlus (super useful functions), there does not exist a short coming of usages for monads within Haskell\footnote{\href{https://wiki.haskell.org/All_About_Monads}{All about Monads}}. Below is a short list of few standard monads found in these libraries and their usage to further your understanding.
+
+\medskip
+\caption{Standard Monad Examples}
+\begin{enumerate}
+    \item Maybe - Computation that may or may not return a result
+    \item Reader - Computation that reads from a shared environment
+    \item Writer - Computation that writes data while evaluating values
+    \item IO - Computation that perform Input Output
+    \item State - Computation that maintain the current or specified state
+    \item Cont - Computation that can be interrupted and/or restarted
+\end{enumerate}
     
 
 \section{Project}
@@ -530,22 +548,30 @@ Projects in Haskell are much more intensive and require more time to accomplish 
 
     \end{lstlisting}
 
+    \subsection{Rational}
+    As an avid small betting gambler I was inspired to pursue this project for a number of different reasons. First of all I am minoring in game development and have made numerous text based adventure games for school projects. The idea of creating a card based game came to me because professors and teachers of my past have always made similar projects. The game of black jack is very simple to learn and can have countless different games because a deck of cards has 52 factorial unique combinations. With a number so ridiculously high there is no possible way any two black jack games will be the same especially with a random shuffle implemented at the beginning of every game. 
+    
+    
 \section{Conclusions}\label{conclusions}
 
 So in conclusion we have gone over quite a bit of subjects regarding Haskell and its basics to understand completely before undertaking an assignment of your own. While having previous knowledge and experience is usually a benefit to your cause, Haskell might put that notion to the test. Something as simple as adding positive numbers can cause so many problems to programmers' complicated structured brains. To fully understand and master this functional programming language will take lots of hours and practice. Haskell is vastly different from most languages used throughout the industry today but can prove beneficial if you know how to use it. This tutorial has covered a large number of different aspects of Haskell and is completely expected that you do not fully understand all the material after completing this guide.
 
 \begin{thebibliography}{99}
-\bibitem[PL]{PL} 
-\href{https://github.com/alexhkurz/programming-languages-2021/blob/main/README.md}{Programming Languages 2021}, Chapman University, 2021.
-
-\bibitem[engineering.fb.com]{https://engineering.fb.com/2015/06/26/security/fighting-spam-with-haskell/}
-\href{https://engineering.fb.com/2015/06/26/security/fighting-spam-with-haskell/}{Fighting spam with Haskell}
 
 \bibitem[serokell.io]{https://serokell.io/blog/haskell-history}
 \href{https://serokell.io/blog/haskell-history}{History of a Community-Powered Language}
 
+\bibitem[engineering.fb.com]{https://engineering.fb.com/2015/06/26/security/fighting-spam-with-haskell/}
+\href{https://engineering.fb.com/2015/06/26/security/fighting-spam-with-haskell/}{Fighting spam with Haskell}
+
 \bibitem[infoq.com]{https://www.infoq.com/presentations/haskell-newsroom-nyt/}
 {\href{https://www.infoq.com/presentations/haskell-newsroom-nyt/}{Haskell in the Newsroom}}
+
+\bibitem[PL]{PL} 
+\href{https://github.com/alexhkurz/programming-languages-2021/blob/main/README.md}{Programming Languages 2021}, Chapman University, 2021.
+
+\bibitem[softwareengineering.stackexchange.com]{https://softwareengineering.stackexchange.com/questions/149167/are-functional-languages-better-at-recursion}
+\href{https://softwareengineering.stackexchange.com/questions/149167/are-functional-languages-better-at-recursion}{Are Functional Languages Better at Recursion}
 
 \bibitem[wiki.haskell.org]{https://wiki.haskell.org/All_About_Monads}
 \href{https://wiki.haskell.org/All_About_Monads}{All About Monads}
