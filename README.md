@@ -25,3 +25,5 @@
 #Upload 11) Reworked wording of some sections pointed out from feedback, started writing about Monad and hoare logic
 
 #Upload 12) Added Haskell Blackjack file. * report.tex is the same as Report.tex but more up to date. Naming issues arose when I traveled back home for break.
+
+#Upload 13) Added project code section and will expand upon conclusion and other bits of Part 2
