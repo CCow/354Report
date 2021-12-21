@@ -60,7 +60,12 @@ This report will dive into the aspects of learning Haskell and the functions to 
 Haskell is a programming language where it may take some time to understand all the features and nuances. One aspect where Haskell differs from the common universal languages is being "lazy". This means Haskell will not do any work unless it needs to be completed. It is as close to assembly language we have had in all of the courses Chapman offers. With learning Haskell, you do not necessarily have to have the most extensive programming experience or knowledge. Haskell is so vastly different from all other languages that it makes it the perfect starting point. Although learning something so different and unique has its advantages, being skilled in mathematics has its benefits to this language. Much of the beginning is understanding and interpreting basic mathematics in different formats. Something as simple as a basic calculator proves its challenges and will make you have an appreciation for everyday programs we use without an extra thought. Since most students taking this course are upperclassmen, that does imply a more extensive understanding than most individuals so we can assume this isn’t our first time learning a new language. Assembly language is vastly different from interpreter languages as one knows, but understanding how the integers and and negative numbers work with different operations will take some time. Firstly, functions are unique in the way they are created. There are multiple classes that must work hand in hand to make a program function correctly. The first assignment for Programming Languages was to create, from a template, a calculator and make our own operations. With a partner we concluded to do our basic 4 mathematical operations and added a couple more, commonly found on a TI-84 calculator. While these other operations, square root, squared, etc. are simple in theory, creating a function that can handle any type of input proves much harder to accomplish. With that out of the way we can dive into the beginning of starting this language. To begin, you should start downloading Haskell by visiting \href{https://hackmd.io/@alexhkurz/Hk86XnCzD}{this link}.
 
 \medskip\noindent
-After familiarizing yourself with the UI and paths needed to have interacting classes, a beneficial task to complete would be to go back and understand lambda calculus. A majority of functions will require some knowledge of lambda calculus and understanding it would fast track any issues you run into while coding any mathematical functions in Haskell. 
+After familiarizing yourself with the user interface and paths needed to have interacting classes, a beneficial task to complete would be to go back and commit to understand lambda calculus. A majority of functions will require some knowledge of lambda calculus and understanding it would fast track any issues you run into while coding any mathematical functions in Haskell. A section of this tutorial will introduce the topic and touch upon the basics but to fully utilize Haskell, a great recommendation would be to immerse yourself in the subject for a few hours until the basics do not trip you up.
+
+\medskip
+If Haskell is a name that you do not recognize then you are not alone. Before taking the Programming Languages course at Chapman I had no idea there was a functional programming language that existed and had a firm hold on the industry for years. Unfortunately for Haskell people moved on to bigger and better things but a desire for those who know the language still exists in today's world. Imperative programming languages are more abundant and more programmers are coming out of college with only knowledge in languages like Java, C++, Python, JavaScript, etc. While it is true that these languages are more common place in most businesses today it would not be a bad thing to have a language like Haskell in your arsenal. Luckily Haskell has been around for quite some time so there are an abundant amount of tutorials, videos, and forums with extensive knowledge to further your skills at mastering this functional language. One of the best sources of information can actually be found at \href{https://www.haskell.org/}{the Haskell home page}. Along with videos the homepage has tabs where you can find courses or books, and get involved with the community via forums.
+
+Imperative programming languages are more abundant and require more programmers to work on them in most businesses. 
     
 \section{Haskell}\label{haskell}
 
@@ -99,7 +104,7 @@ After familiarizing yourself with the UI and paths needed to have interacting cl
     \noindent Every software or programming language will have its pros and cons so understanding its short comings is vital to overcoming the challenges presented. Haskell is not an easy step for most people, especially since it varies from most modern mainstream IDEs like Java and C++. 
     
     \subsubsection{Typeclasses}
-    A new feature to programmers who have familiarized themselves with object oriented programming is typeclasses. These interfaces act as, well an interface, not so much like classes as Java users are comfortable with. These typeclasses act as a definition of a specified behavior and not objects. Some examples of typeclasses are listed below with an example.
+    A new feature to programmers who have familiarized themselves with object oriented programming is typeclasses. Languages like Java or Python have classes that act as objects, with their own properties These interfaces act as, well an interface, not so much like classes as Java users are comfortable with. These typeclasses act as a definition of a specified behavior and not objects. Haskell is equipped with default types but allows users to create their own if they so desire, more on that later. Some examples of common typeclasses are listed below with an example of each.
     \medskip
     
     \caption{Haskell Types by Default}
@@ -113,7 +118,7 @@ After familiarizing yourself with the UI and paths needed to have interacting cl
               \item Float - 5.75
     \end{itemize}
     
-    There are some important things to note. First, the Bool type represents a single bit of data True or False which can be broken down to the binary equivalent of 1/0. Bool is the smallest bit value possible inside Haskell. Second would be the difference between an Int and an Integer. Ints are integers but have a maximum input of 2147483647. Any natural numbers greater than that will have to be labeled as 'Integer' because they have no maximum. The ability to have no max does impact performance but not enough to cause failures while compiling. The char typeclass consists of any singular character. Meanwhile a string is just a sequence of chars. Strings will obviously take more performance than a char but a string is actually in the typeclass char. The last two differences to discuss would be floats and doubles. They interact in a similar way to the dynamic of Ints and Integers. Both types are decimal numbers but floats can have a maximum of 23 spaces after the decimal point. On the other hand doubles can hold over 23 places passed the decimal but no more than 52, the maximum amount of places a decimal value can be in Haskell \href{PL}{PL}. One more type not listed, but important to note, would be the Eq typeclass. This class is responsible for equality checking in the code. The way this class is represented is with double equal signs '==' or to check if something is not equals, you would type '/='.
+    There are some important things to note. First, the Bool type represents a single bit of data True or False which can be broken down to the binary equivalent of 1/0. Bool is the smallest bit value possible inside Haskell. Second would be the difference between an Int and an Integer. Ints are integers but have a maximum input of 2147483647. Any natural numbers greater than that will have to be labeled as 'Integer' because they have no maximum. The ability to have no max does impact performance but not enough to cause failures while compiling. The char typeclass consists of any singular character. Meanwhile a string is just a sequence of chars. Strings will obviously take more performance than a char but a string is actually in the typeclass char. The last two differences to discuss would be floats and doubles. They interact in a similar way to the dynamic of Ints and Integers. Both types are decimal numbers but floats can have a maximum of 23 spaces after the decimal point. On the other hand doubles can hold over 23 places passed the decimal but no more than 52, the maximum amount of places a decimal value can be in Haskell \href{PL}{PL}. One more type not listed, but important to note, would be the Eq typeclass. This class is responsible for equality checking in the code. The way this class is represented is with double equal signs '==' or to check if something is not equals, you would type '/='. Additionally all these types must be used with the same type. Meaning if you wanted to add an Integer and a float then it would be ill typed and would not compute the solution. A workaround for this issue is to assign the integer as a float but just add '.0' to end of the number so the types can go through the function. 
             
     
     \subsubsection{Type Inference}
@@ -213,7 +218,7 @@ After familiarizing yourself with the UI and paths needed to have interacting cl
     \end{itemize}
     
     \medskip
-    \noindent Obviously this is not the full extent of all the commands possible but these are a great starting point if you are learning Haskell for the first time. 
+    \noindent Obviously this is not the full extent of all the commands possible but these are a great starting point if you are learning Haskell for the first time. One important aspect of lists to remember is it is impossible to have different types within the same list. If you start a list with a float then you must continue with floats and not use integers or strings. This is true with every predefined list created by Haskell. Where it differentiates is when you create your own custom list and can fill it with whatever attributes you need for that program, whether that be strings and integers, or floats, doubles, and booleans. 
 
 \subsection{Custom Structure}
 Haskell is equipped with customization if you can adequately structure your program. Maneuvering the intricacies of Haskell will take time to understand so making mistakes is encouraged, because failing is the best teacher. The functional programming language has the option to create your own data types if your code requires more than the default data structures given. 
@@ -260,8 +265,6 @@ Haskell is equipped with customization if you can adequately structure your prog
         let me = Student "Connor" "Cowher" "Senior" "Computer Science" 3.50
     \end{lstlisting}
     \noindent Here we make a reference to the Student data type and name it 'me'. I input the items and their correct types that correspond to the Student type, String String String String Float. With that command a student is created and we can pick and choose what to see. For instance if I were to type in 'me' into the command line, all 4 Strings and singular Float would be outputted on the screen. If this list were to hold more than one student and you wanted to find the Connor's major, you could have Haskell only return that item. All you would need to do is type in 'major' followed by 'me' and the interpreter would return Computer Science since we inputted that earlier. 
-    
-    \subsubsection{New Constructors}
     
 \subsection{Haskell Input and Output}
     \subsubsection{Understanding Functional Language}
@@ -318,8 +321,39 @@ Haskell is equipped with customization if you can adequately structure your prog
     \medskip
     
     \noindent That is all there is to it. The first thing to break down about this simple input is the lambda symbol. Like in many other languages Haskell requires a symbol to denote the start of a function. We accomplish this by using lambda at the start of the line. After that you must define the parameters of the function and end the list with a '.'. The second a in the example is known as the body of the function. This part of the code will be returned when the function is called in the compiler. Some vocabulary to know is the variable in the example above is known as bound because the 'a' appears in both the parameters and the function body. If there were to only be one 'a' on one side of the '.' then the variable would be labeled as free. Bound and free are self explanatory but in short, a free variable indicates the function depends on the variable and a bound variable does not. 
+    
+    Haskell can utilize curried functions within lambda calculus when the function calls for more than one parameter. To illustrate lets take a look at a very basic addition function and use the parameters 2 and 4.
+    
+    $$(\lambda a. \lambda b. \;a + b)2\; 4$$
+   Since 2 is the left most parameter, it will be substituted into the left most variable in the equation, the 'a' term.
+   $$(\lambda b. \;2 + b)\; 4$$
+   That leaves us with 4. There is only one variable left in the equation so 4 will slide into where 'b' used to be.
+   $$(2 + 4)$$
+   After completing those two steps there are no more parameters left to distribute and the final step is to calculate the expression.
+   $$2 + 4 = 6$$
+   That is how to use lambda calculus with curried functions when two or more parameters exist outside the parenthesis. Not every mathematical equation can be done in four easy steps but visualizing how to complete it can help get programmers started on the right track
+    
         \subsubsection{Applications of Lambda Calculus}
-        Writing a lambda function is one thing to master and applying it to another function can be a difficult thing to learn. First of all, lambda functions are anonymous and do not have a name when being used. These functions differ from others because they do not take in variables. Instead they are nested by other functions 
+        Writing a lambda function is one thing to master and applying it to another function can be a difficult thing to learn. First of all, lambda functions are anonymous and do not have a name when being used. These functions differ from others because they do not take in variables. Instead they are nested by other functions. In every lambda function there exists at least 3 separate parts. They include the variable; logical value or string in the form of a parameter, application; applying function to an argument and lambda abstraction; definition of the function. In the example above the variable listed is the a after the '.'. The lambda abstraction is the whole entity. Lastly the application would be another $\lambda b.b$ following the other lambda abstraction. 
+        
+        \subsubsection{Capture Avoidance Substitution}
+        When the computer performs lambda calculus there are some cases when the variables inside the expression are required to change. When evaluating expressions with lambda calculus the usual route the computer takes is replacing variable names via recursion, more about that later. However in some cases there could be expressions that share the same variable name and would cause the evaluation to stay the same and not perform the operations. Obviously as a programmer you want to avoid this at all costs. To combat this situation, we will employ the help of Capture Avoidance Substitution. CAS is a very helpful strategy to utilize within Haskell to save your code when performing lambda calculus. The most important thing to remember is to switch up variable names when creating a function. For instance when I start a new expression, I name my first variable 'a' then 'b' all the way down the alphabet so no variable will repeat unless more than twenty six exist within that function. However I am not like every programmer and a large majority like to utilize variable names like 'x' and 'y'.
+        
+        \medskip
+        \caption{Incorrect Variable Naming}
+        $$(\lambda a. \lambda b. a )\; b$$
+        \smallskip 
+        $$(\lambda x. \lambda y. x)\; y$$
+        \noindent Here we have 2 identical lambda functions with varying variable names. Variable 'a' is the same as 'x' and 'b' is the same as 'y' in each example. Now if we were to try and evaluate these expressions something bad would occur. Both the 'y' and 'b' that exist outside of the parenthesis are free variables and completely different that the ones inside. Both sets of variables inside the parenthesis are bound to the lambda and therefore completely different than those that are free. If this expression were to be evaluated, the singular variable that exists at the end would end up being captured, and eventually bound to the lambda function. By simply renaming the free variables to something different we can avoid the headache of accidentally capturing the outside variable.
+        
+        \medskip
+        \caption{Correct Variable Naming}
+        $$(\lambda a. \lambda b.a)\; c$$
+        \smallskip
+        $$(\lambda x. \lambda y.x) \; z$$
+        
+        \noindent With one different keystroke the integrity of these lambda functions is saved and Capture Avoidance Substitution proves to be beneficial to know about. Obviously mistakes will happen and your code will fail on occasion but it is important to remember the strategies that help protect your code at different steps of assembly.
+        
     
         \subsubsection{Church Numerals}
         Church numerals can be defined as the act of applying a function to a value, any number of times. The amount of times it is applied is added onto the end of 'church number n' where n denotes the number.
@@ -356,21 +390,30 @@ Haskell is equipped with customization if you can adequately structure your prog
             --factorial is used to define its own definition
         \end{lstlisting}
         
-        \noindent Here we place factorial 0 = 1 at the beginning of the function because when we use the factorial expression, you keep multiplying n - 1 until you reach 0. If you were to multiply the zero into the sequence then your function wouldn't work and zero would always be your answer. 
+        \noindent Here we place factorial 0 = 1 at the beginning of the function because when we use the factorial expression, you keep multiplying n - 1 until you reach 0. If you were to multiply the zero into the sequence then your function wouldn't work and zero would always be your answer. Let's take a look at a contrast factorial function in Java to see the differences.
+        
+        \medskip
+        \caption{Java Factorial example}
+        \begin{lstlisting}
+        int x = 5;
+            public int factorial(x){
+                if(x <= 0){
+                    return 1;
+                }
+                else{
+                    return (x * factorial(x-1));
+                }
+            }
+        \end{lstlisting}
+        Clearly Haskell can complete the same function in much less lines due to the fact it does not require if/else statements in this particular function. With the edge condition, all if/else statements are unnecessary because of pattern matching within Haskell. In addition there is no need to distinguish types in the Haskell definition because teh interpreter can infer the function is an integer equation due to the variable 'a' and gradual decrease to a = 0.
         
         \medskip
         \noindent A very under looked aspect of Haskell is the combination of recursion and pattern matching. With an imperative programming language like Java or C/C++ creating a factorial function requires a lot of lines and multiple if-else statements. Haskell does not have this issue because a simple pattern match tied together with a recursive function can quickly and efficiently create the factorial, or any other mathematical sequential function.
         
-        \begin{lstlisting}
-            
-        \end{lstlisting}
+        
         
         \subsubsection{Parsing Continued}
         With a better understand of pattern matching and recursion we can dive deeper into the theory of parsing. Parsing is taking a concrete syntax and transforming it into an abstract syntax, meaning it will take in a input of characters and applies logic to conform to the software. A very important computer scientist who helped with multiple advancements in the field including Parsing was Robert Floyd.
-        
-\subsection{String Rewriting}
-
-    \subsubsection{Normal Forms}
     
 \subsection{Hoare Logic}
 Switching things up, a new computer scientist we have not discussed helped with programming theory around 1969. This scientist was named Tony Hoare and his contribution to computer programming is immortalized in a logical set of rules for configuring the correctness of a computer. To start, the foundation of Hoare logic begins with Hoare triple, as shown below.
@@ -402,7 +445,8 @@ A new structure being introduced is a monad. Monads are already implemented in H
    doesFileExist :: \Users\CCow\CPSCCourses\CPSC354\test.hs -> IO Bool
    True
    --Alternatively here we have a boolean that returns true or false given if a file is in existence via the file path location
-   --Additionally the file path shown here is just an example of how to format the file path to check if a file exists and/or to remove a file
+   
+   --Additionally the file paths shown here are just examples of how to format the file path to check if a file exists and/or to remove a file, they will all be different on every machine
 \end{lstlisting}
 
 \noindent For instance if a programmer attaches an I/O value to a created function, the function will execute commands based solely on the files already present or inputs from the command line. After which a monad value is returned in the form of a system output, displayed on the screen. A way of creating your own monad is with the double greater than symbol, $>>$ on keyboard. Typically when using I/O types in Haskell the programmer would name a value and have a pointer assigned to getLine or putStrLn. However we can now reverse the roles and make the I/O devices do more work. Let's see an example of welcoming a new user into a random database.
@@ -414,18 +458,85 @@ A new structure being introduced is a monad. Monads are already implemented in H
         putStrLn "Hello " ++ username ++ ", the menu screen will load now" 
         ...
 \end{lstlisting}
+
+\noindent Monad are a tricky structure to understand in Haskell. The comparison that helps draw the points together is when you program in an imperative language, you have to use semicolons to denote where a line is finished. Monads are in a way, a programmable semicolon for functional languages where the user does not have to put in the work for entering the combination manually. The monad will automatically determine how the combined computations translate into a new state of computation\footnote{\href{https://wiki.haskell.org/All_About_Monads}{All about Monads}}. Monad are statically typed and work to free up time and energy for the user who can best utilize the structure.
     
 
 \section{Project}
 
-Projects in Haskell are much more intensive and require more time to accomplish the task you wish to complete. The biggest piece of advice I suggest would be it is okay to not get it immediately. Haskell is great for new open minded individuals but experienced programmers might struggle to switch gears into this new world. Baseball players struggle to hit golf balls because the swing is so different and it is the exact same concept here. In Programming Languages at Chapman University we started to use Haskell with a calculator project. In this section I will show you how to extend the calculator application even further than what we accomplished in class.
+Projects in Haskell are much more intensive and require more time to accomplish the task you wish to complete. The biggest piece of advice I suggest would be it is okay to not get it immediately. Haskell is great for new open minded individuals but experienced programmers might struggle to switch gears into this new world. Baseball players struggle to hit golf balls because the swing is so different and the exact same concept can be applied here. In Programming Languages at Chapman University we started using Haskell by tinkering with a calculator application. Today I will show you a mini project that is vastly different than applying mathematics to a grammar file. 
+    
+    \subsection{Background Information}
+    The act of gambling is such a thrill when you hit it big. That is why so many people invest in trips to Vegas for the chance of making a profit and heading back home with a couple more dollar bills in their pockets. However this is not the reality for a majority of people who actively gamble their money away. With some inspiration from GitHub I was able to rework a blackjack simulator but without the betting aspect. 
+    
+    \subsection{Project Code}
+    \begin{lstlisting}
+       --BlackJack game where you test your luck to obtain 21 with only two cards import System.Random
+
+        --deck creation seperated into hand value and card face values
+        data value = Ace | Two | Three | Four | Five | Six | Seven | Eight | Nine | Ten |
+        Jack | Queen | King deriving(Show, Eq, Enum)
+        data Card = (value)
+
+        type Deck = [value]
+        type Hand = [value]
+        
+        --4 sets of suits so Ace-King repeats 4 times for full deck of cards
+        deckOfCards :: Deck
+        deckOfCards = [Ace,Two,Three,Four,Five,Six,Seven,Eight,Nine,Ten,Jack,Queen,King]++
+                      [Ace,Two,Three,Four,Five,Six,Seven,Eight,Nine,Ten,Jack,Queen,King]++
+                      [Ace,Two,Three,Four,Five,Six,Seven,Eight,Nine,Ten,Jack,Queen,King]++
+                      [Ace,Two,Three,Four,Five,Six,Seven,Eight,Nine,Ten,Jack,Queen,King]
+        
+        cardNum :: value -> [Int]
+        cardNum Ace = [1, 11]
+        cardNum Two = [2]
+        cardNum Three = [3]
+        cardNum Four = [4]
+        cardNum Five = [5]
+        cardNum Six = [6]
+        cardNum Seven = [7]
+        cardNum Eight = [8]
+        cardNum Nine = [9]
+        cardNum Ten = [10]
+        cardNum Jack = [10]
+        cardNum Queen = [10]
+        cardNum King = [10]
+        
+        --players receives 2 cards for hand and those cards are taken out of the deck
+        deal :: Int -> Hand -> deckOfCards
+        deal = (take 2 deckOfCards, drop 2 deckOfCards)
+        
+        --checking if initial hand is black jack, (Ace + (10 | Jack | Queen | King))
+        blackJack :: Hand -> bool
+        blackJack [firstCard, secondCard] = 
+        ((firstCard == Ace) && (secondCard == 10 || Jack || Queen || King)) ||
+        ((secondCard == Ace) && (firstCard == 10 || Jack || Queen || King))
+        
+        blackJack _ = False
+        
+        --check if deal granted BlackJack
+        winner :: Hand -> Int -> Str
+        winner hand
+          | blackJack = "Winner you got BlackJack!"
+          | otherwise = "Sorry Try again."
+        
+        --Gameplay interface start
+        main :: IO
+        main = do
+          putStrLn "Welcome to BlackJack, enter p to play"
+          winner <- getLine >>= readIO
+          putStrLn "Thanks for playing!"
+
+    \end{lstlisting}
 
 \section{Conclusions}\label{conclusions}
 
-So in conclusion we have gone over quite a bit of subjects regarding Haskell and its basics to understand completely before undertaking an assignment of your own. While having previous knowledge and experience is usually a benefit to your cause, Haskell might put that notion to the test. Something as simple as adding positive numbers can cause so many problems to programmers' complicated structured brains. 
+So in conclusion we have gone over quite a bit of subjects regarding Haskell and its basics to understand completely before undertaking an assignment of your own. While having previous knowledge and experience is usually a benefit to your cause, Haskell might put that notion to the test. Something as simple as adding positive numbers can cause so many problems to programmers' complicated structured brains. To fully understand and master this functional programming language will take lots of hours and practice. Haskell is vastly different from most languages used throughout the industry today but can prove beneficial if you know how to use it. This tutorial has covered a large number of different aspects of Haskell and is completely expected that you do not fully understand all the material after completing this guide.
 
 \begin{thebibliography}{99}
-\bibitem[PL]{PL} \href{https://github.com/alexhkurz/programming-languages-2021/blob/main/README.md}{Programming Languages 2021}, Chapman University, 2021.
+\bibitem[PL]{PL} 
+\href{https://github.com/alexhkurz/programming-languages-2021/blob/main/README.md}{Programming Languages 2021}, Chapman University, 2021.
 
 \bibitem[engineering.fb.com]{https://engineering.fb.com/2015/06/26/security/fighting-spam-with-haskell/}
 \href{https://engineering.fb.com/2015/06/26/security/fighting-spam-with-haskell/}{Fighting spam with Haskell}
@@ -435,6 +546,13 @@ So in conclusion we have gone over quite a bit of subjects regarding Haskell and
 
 \bibitem[infoq.com]{https://www.infoq.com/presentations/haskell-newsroom-nyt/}
 {\href{https://www.infoq.com/presentations/haskell-newsroom-nyt/}{Haskell in the Newsroom}}
+
+\bibitem[wiki.haskell.org]{https://wiki.haskell.org/All_About_Monads}
+\href{https://wiki.haskell.org/All_About_Monads}{All About Monads}
+
+\bibitem[github.com/Wilfred/Blackjack]{https://github.com/Wilfred/Blackjack/blob/master/Blackjack.hs}
+\href{https://github.com/Wilfred/Blackjack/blob/master/Blackjack.hs}{
+Wilfred Hughes: BlackJack}
 
 \end{thebibliography}
 
