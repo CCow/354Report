@@ -27,3 +27,5 @@
 #Upload 12) Added Haskell Blackjack file. * report.tex is the same as Report.tex but more up to date. Naming issues arose when I traveled back home for break.
 
 #Upload 13) Added project code section and will expand upon conclusion and other bits of Part 2
+
+#Upload 14) Fixed bibliography order and restructured sub-sections. Finishing up final touches in part 2 and 3 tomorrow morning
