@@ -35,3 +35,5 @@
 #Upload 16) Adding .pdf file of report
 
 #Upload 17) Final finished copy of the report. Reuploaded .pdf version since it was named incorrectly
+
+#Upload 18) Deleted a /clearpage that did not catch my attention
