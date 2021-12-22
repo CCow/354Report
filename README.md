@@ -33,3 +33,5 @@
 #Upload 15) Beefed up sections where paragraphs seemed light, added more footnotes and references into sections and bibligraphy
 
 #Upload 16) Adding .pdf file of report
+
+#Upload 17) Final finished copy of the report. Reuploaded .pdf version since it was named incorrectly
