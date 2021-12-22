@@ -31,3 +31,5 @@
 #Upload 14) Fixed bibliography order and restructured sub-sections. Finishing up final touches in part 2 and 3 tomorrow morning
 
 #Upload 15) Beefed up sections where paragraphs seemed light, added more footnotes and references into sections and bibligraphy
+
+#Upload 16) Adding .pdf file of report
